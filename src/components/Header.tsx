@@ -5,16 +5,22 @@ import { useHeadroom } from '@mantine/hooks';
 import { useHover } from '@mantine/hooks';
 import { useDisclosure } from '@mantine/hooks';
 import { Burger, Drawer } from '@mantine/core';
+import { useButtonStore } from '../contexts/ActiveButtonStore';
+import Link from 'next/link'
 
 function Header() {
 
     const pinned = useHeadroom({ fixedAt: 120 });
 
-    const [activeButton, setActiveButton] = useState(null);
+    const [isHovered, setIsHovered] = useState<number>(5);
 
-    const handleButtonClick = (index: any) => {
-        setActiveButton(index);
+    const handleButtonHover = (index: number) => {
+        setIsHovered(index);
     };
+
+    const handleButtonClick = (index: number) => {
+        // setIsHovered(5);
+    }
 
     const [opened, { toggle, close }] = useDisclosure();
 
@@ -26,6 +32,10 @@ function Header() {
         { label: 'EDUCATION', link: '/education' },
         { label: 'CONTACT', link: '/contact' }
     ];
+
+    const { activeButton, setActiveButton } = useButtonStore.getState();
+
+    console.log(activeButton)
 
     return (
         <>
@@ -71,15 +81,22 @@ function Header() {
                                 visibleFrom="md"
                                 key={index}
                                 variant="transparent"
-                                color={activeButton === index ? 'green' : 'white'}
                                 style={{
                                     fontWeight: 'semibold',
                                     fontSize: '1em',
+                                    textDecoration: 'none'
                                 }}
                                 onClick={() => handleButtonClick(index)}
-                            // href={button.link}
                             >
-                                {button.label}
+                                <a
+                                    style={{ color: index == (isHovered || activeButton) ? '#18D26E' : 'white', textDecoration: 'none' }}
+                                    href={button.link}
+                                    onMouseEnter={() => (handleButtonHover(index))}
+                                    onMouseLeave={() => handleButtonHover(5)}
+                                    onClick={() => setActiveButton(index)}
+                                >
+                                    {button.label}
+                                </a>
                             </Button>
                         ))}
                         <Burger hiddenFrom="md" color='white' opened={opened} onClick={toggle} aria-label="Toggle navigation" />

@@ -1,6 +1,11 @@
+import Introduction from "@/components/Introduction";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main style={{
+      marginTop: '70px'
+    }}>
+      <Introduction />
     </main>
   );
 }
