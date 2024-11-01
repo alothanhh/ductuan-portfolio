@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Introduction from "@/components/Introduction";
 import SkillMarquee from "@/components/SkillMarquee";
 
@@ -8,6 +9,7 @@ export default function Home() {
     }}>
       <Introduction />
       <SkillMarquee />
+      <Contact />
     </main>
   );
 }

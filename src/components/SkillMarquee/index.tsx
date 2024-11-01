@@ -19,7 +19,8 @@ function SkillMarquee() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '32px',
-                marginTop: '16px',
+                marginTop: '32px',
+                marginBottom: '64px',
             }}>
             <Title text='SKILLS' />
 
