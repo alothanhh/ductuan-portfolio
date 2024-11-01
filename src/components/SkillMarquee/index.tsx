@@ -1,9 +1,9 @@
 import Marquee from "react-fast-marquee";
-import SkillCard from "./SkillMarquee/SkillCard";
+import SkillCard from "./SkillCard";
 import icReact from "@/assets/icons/skill/icReact.png"
 import icGitlab from "@/assets/icons/skill/icGitlab.svg"
 import icNext from "@/assets/icons/skill/icNext.svg"
-import Title from "./common/Title";
+import Title from "../common/Title";
 import { Box } from "@mantine/core";
 
 const SKILL_LIST = [
@@ -14,13 +14,15 @@ const SKILL_LIST = [
 
 function SkillMarquee() {
     return (
-        <Box style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '32px',
-            marginTop: '16px',
-        }}>
+        <Box
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '32px',
+                marginTop: '16px',
+            }}>
             <Title text='SKILLS' />
+
             <Marquee
                 pauseOnHover
                 autoFill
