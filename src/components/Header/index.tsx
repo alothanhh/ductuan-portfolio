@@ -35,8 +35,6 @@ function Header() {
 
     const { activeButton, setActiveButton } = useButtonStore.getState();
 
-    console.log(activeButton)
-
     return (
         <>
             <Portal>

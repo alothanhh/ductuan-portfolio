@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mantine/core": "^7.6.2",
-    "@mantine/hooks": "^7.6.2",
+    "@mantine/hooks": "^7.14.3",
     "next": "14.1.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.5.2",

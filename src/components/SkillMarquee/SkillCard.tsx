@@ -10,7 +10,7 @@ function SkillCard({ logo }: Props) {
             style={{
                 padding: '8px',
             }}>
-            <Image src={logo} alt="logo" width={64} height={64} />
+            <Image src={logo} alt="logo" height={64} />
         </div>
     </>
 }

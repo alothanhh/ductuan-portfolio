@@ -3,13 +3,23 @@ import SkillCard from "./SkillCard";
 import icReact from "@/assets/icons/skill/icReact.png"
 import icGitlab from "@/assets/icons/skill/icGitlab.svg"
 import icNext from "@/assets/icons/skill/icNext.svg"
+import icAngular from "@/assets/icons/skill/icAngular.png"
+import icTailwind from "@/assets/icons/skill/icTailwind.png"
+import icPts from "@/assets/icons/skill/icPts.png"
+import icAi from "@/assets/icons/skill/icAi.png"
+import icMongoDb from "@/assets/icons/skill/icMongoDB.svg"
 import Title from "../common/Title";
 import { Box } from "@mantine/core";
 
 const SKILL_LIST = [
     icReact,
     icGitlab,
-    icNext
+    icNext,
+    icAngular,
+    icTailwind,
+    icPts,
+    icAi,
+    icMongoDb,
 ]
 
 function SkillMarquee() {

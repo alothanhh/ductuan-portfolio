@@ -4,8 +4,11 @@ import icLinkedln from "@/assets/icons/contact/icLinkedln.svg"
 import icTelegram from "@/assets/icons/contact/icTelegram.svg"
 import { CONTACT_CARD_INFO } from "../constants/contact.constant"
 import ContactCard from "./ContactCard"
+import useWindowSize from "@/hooks/use-window-size"
 
 function ContactInfo() {
+    const { isMobile } = useWindowSize();
+
     return <>
         <Box style={{
             display: 'flex',
@@ -13,7 +16,7 @@ function ContactInfo() {
             width: '100%',
             gap: '8px',
             borderRadius: '8px',
-            padding: '0 8px',
+            padding: isMobile ? '0' : '0 8px',
         }}>
             <Text style={{
                 fontSize: '30px',
