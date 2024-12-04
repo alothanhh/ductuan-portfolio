@@ -20,6 +20,7 @@ const SKILL_LIST = [
     icPts,
     icAi,
     icMongoDb,
+
 ]
 
 function SkillMarquee() {
