@@ -1,15 +1,23 @@
+'use client'
 import { Text } from "@mantine/core"
 import Image from "next/image"
+import { FC, SVGProps, useMemo, useState } from "react"
 
 type Props = {
-    logo: string
+    logo: FC<SVGProps<SVGElement>>
     title: string
     description: string
 }
 
 function ContactCard({ logo, title, description }: Props) {
+    const Logo = logo;
+    const [isHovered, setIsHovered] = useState<boolean>(false);
+
+    const iconColor = useMemo(() => (isHovered ? 'rgb(8, 205, 218)' : 'rgb(26, 247, 169)'), [isHovered])
+
     return <>
         <div
+            onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}
             style={{
                 padding: '20px 16px',
                 backgroundColor: '#F7F7F7',
@@ -19,6 +27,8 @@ function ContactCard({ logo, title, description }: Props) {
                 gap: '16px',
                 flexDirection: 'row',
                 alignItems: 'center',
+                transition: 'transform 0.3s ease',
+                transform: isHovered ? 'scale(1.05)' : 'scale(1)',
             }}>
             <div
                 style={{
@@ -30,7 +40,10 @@ function ContactCard({ logo, title, description }: Props) {
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}>
-                <Image src={logo} alt="logo" width={24} height={24} />
+                {/* <Image src={logo} alt="logo" width={24} height={24} /> */}
+                {/* <Logo />
+                 */}
+                <Logo fill={iconColor} />
             </div>
             <div>
                 <Text style={{

@@ -1,8 +1,11 @@
 'use client'
 import { Box, Button } from "@mantine/core"
 import InputField from "../common/InputField"
+import { useHover } from "@mantine/hooks";
 
 function ContactForm() {
+    const { hovered, ref } = useHover<HTMLButtonElement>();
+
     return <>
         <Box style={{
             display: 'flex',
@@ -19,9 +22,17 @@ function ContactForm() {
 
             <InputField label="Your message" placeholder="Enter your message" multiline />
 
-            <Button color="#18D26E" style={{
-                width: '100%',
-            }}>Send Message</Button>
+            <Button
+                ref={ref}
+                style={{
+                    width: '100%',
+                    backgroundSize: '200%',
+                    transition: 'background-position 0.8s ease, color 0.3s ease',
+                    backgroundImage: hovered
+                        ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
+                        : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
+                    backgroundPosition: hovered ? '100% 0' : '0% 0',
+                }}>Send Message</Button>
         </Box>
     </>
 }

@@ -46,17 +46,23 @@ function Header() {
                         right: 0,
                         padding: 'var(--mantine-spacing-xs)',
                         height: rem(70),
-                        zIndex: 0,
+                        zIndex: 10,
                         transform: `translate3d(0, ${pinned ? 0 : rem(-110)}, 0)`,
                         transition: 'transform 400ms ease',
                         backgroundColor: 'black',
                         display: 'flex',
                         justifyContent: 'space-between',
+                        alignItems: 'center',
                         paddingLeft: '3%',
                         paddingRight: '3%'
                     }}
                 >
-                    <Box style={{ borderLeft: '7px solid #18D26E' }}>
+                    <Box style={{ display: 'flex' }}>
+                        <div style={{
+                            backgroundImage: 'var(--primary-color)',
+                            width: '7px',
+                        }} />
+
                         <Text style={{
                             color: 'white',
                             fontWeight: 'bold',

@@ -29,6 +29,10 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+:root {
+  --primary-color: linear-gradient(269.45deg, rgb(26, 247, 169) 0%, rgb(8, 205, 218) 100%);
+}
+
 #root, #__next {
   isolation: isolate;
 }
