@@ -9,11 +9,26 @@ import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import ScrollFadeUp from "../shared/scroll-fade-up"
 import { useHover } from "@mantine/hooks"
-import { useRef } from "react"
 
 function Introduction() {
     const { isMobile } = useWindowSize();
     const { hovered, ref } = useHover<HTMLButtonElement>();
+
+    const handleDownload = () => {
+        const pdfUrl = '/cv/CV_Thanh_Dang.pdf';
+
+        const fileName = 'CV_Thanh_Dang.pdf';
+
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+    };
+
 
     return <ScrollFadeUp repeat>
         <Box
@@ -51,7 +66,7 @@ function Introduction() {
                     backgroundImage: 'var(--primary-color)',
                     color: 'transparent',
                     backgroundClip: 'text'
-                }}>Quang Thanh</span></Text>
+                }}>Quang Thành (Aiden)</span></Text>
 
                 <Text style={{
                     // textAlign: 'justify'
@@ -120,6 +135,7 @@ function Introduction() {
 
                     <Button
                         ref={ref}
+                        onClick={handleDownload}
                         style={{
                             width: 'max-content',
                             backgroundSize: '200%',
