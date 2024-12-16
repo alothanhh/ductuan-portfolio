@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact";
 import Introduction from "@/components/Introduction";
+import Projects from "@/components/Projects";
 import SkillMarquee from "@/components/SkillMarquee";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     }}>
       <Introduction />
       <SkillMarquee />
+      <Projects />
       <Contact />
     </main>
   );
