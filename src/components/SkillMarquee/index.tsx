@@ -10,6 +10,8 @@ import icAi from "@/assets/icons/skill/icAI.png"
 import icMongoDb from "@/assets/icons/skill/icMongoDB.svg"
 import Title from "../common/Title";
 import { Box } from "@mantine/core";
+import { useContext } from "react";
+import { ScrollContext } from "@/contexts/ScrollContext";
 
 const SKILL_LIST = [
     icReact,
@@ -23,8 +25,12 @@ const SKILL_LIST = [
 ]
 
 function SkillMarquee() {
+    const { targetRef, targetId } = useContext(ScrollContext);
+
     return (
         <Box
+            id="skill-marquee"
+            ref={targetId === 'skill-marquee' ? targetRef : null}
             style={{
                 display: 'flex',
                 flexDirection: 'column',

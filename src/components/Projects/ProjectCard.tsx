@@ -21,7 +21,8 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
                 border: '1px solid #e5e5e5',
                 borderRadius: '8px',
                 backgroundColor: 'white',
-                minHeight: '195px'
+                minHeight: '195px',
+                boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
             }}>
             <Image src={project.image}
                 alt='project'
@@ -38,7 +39,6 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    // flexWrap: 'wrap',
                     gap: '8px',
                     width: '100%'
                 }}
@@ -49,7 +49,7 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
                 }}>
                     {project.title}
                 </Text>
-                <Box style={{ display: 'flex', gap: '8px' }}>{project.techList.map((tech) => {
+                <Box style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>{project.techList.map((tech) => {
                     return (
                         <Text key={tech} style={{
                             padding: '2px 8px',

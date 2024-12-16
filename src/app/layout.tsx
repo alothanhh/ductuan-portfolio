@@ -5,6 +5,8 @@ import styles from "./styles.module.css"
 import Header from "@/components/Header";
 import MantineRegistry from "@/contexts/MantineRegistry";
 import { useButtonStore } from '../contexts/ActiveButtonStore';
+import ScrollContextProvider from "@/contexts/ScrollContext";
+import { useContext } from "react";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -22,8 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <MantineRegistry>
-          <Header />
-          {children}
+          <ScrollContextProvider>
+            <Header />
+            {children}
+          </ScrollContextProvider >
         </MantineRegistry>
       </body>
     </html>

@@ -1,11 +1,11 @@
-import { createStore } from 'zustand';
+import { createStore } from "zustand";
 
 interface ButtonStoreState {
-  activeButton: number;
-  setActiveButton: (buttonNumber: number) => void;
+  activeButton: string;
+  setActiveButton: (label: string) => void;
 }
 
 export const useButtonStore = createStore<ButtonStoreState>((set) => ({
-  activeButton: 5,
-  setActiveButton: (buttonNumber) => set({ activeButton: buttonNumber }),
+  activeButton: "introduction",
+  setActiveButton: (activeButton) => set({ activeButton: activeButton }),
 }));

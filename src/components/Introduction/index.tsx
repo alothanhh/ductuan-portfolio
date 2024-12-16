@@ -9,10 +9,13 @@ import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import ScrollFadeUp from "../shared/scroll-fade-up"
 import { useHover } from "@mantine/hooks"
+import { useContext } from "react"
+import { ScrollContext } from "@/contexts/ScrollContext"
 
 function Introduction() {
     const { isMobile } = useWindowSize();
     const { hovered, ref } = useHover<HTMLButtonElement>();
+    const { targetRef, targetId } = useContext(ScrollContext);
 
     const handleDownload = () => {
         const pdfUrl = '/cv/CV_Thanh_Dang.pdf';
@@ -32,6 +35,8 @@ function Introduction() {
 
     return <ScrollFadeUp repeat>
         <Box
+            id="introduction"
+            ref={targetId === 'introduction' ? targetRef : null}
             style={{
                 backgroundColor: '#F7F7F7',
                 padding: isMobile ? '64px 0 64px 64px' : '64px 128px',

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Box, Portal, rem, Text, Grid, Flex, Button } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
 import { useHover } from '@mantine/hooks';
@@ -7,33 +7,24 @@ import { useDisclosure } from '@mantine/hooks';
 import { Burger, Drawer } from '@mantine/core';
 import { useButtonStore } from '../../contexts/ActiveButtonStore';
 import Link from 'next/link'
+import { ScrollContext } from '@/contexts/ScrollContext';
+import HeaderSection from './Header-Section';
 
 function Header() {
 
     const pinned = useHeadroom({ fixedAt: 120 });
 
-    const [isHovered, setIsHovered] = useState<number>(5);
-
-    const handleButtonHover = (index: number) => {
-        setIsHovered(index);
-    };
-
-    const handleButtonClick = (index: number) => {
-        // setIsHovered(5);
-    }
 
     const [opened, { toggle, close }] = useDisclosure();
 
     // Danh sách các nút Button và nội dung tương ứng
     const buttons = [
-        { label: 'HOME', link: '/' },
-        { label: 'PROJECTS', link: '/projects' },
-        { label: 'SKILL & EXPERIENCE', link: '/skills' },
-        { label: 'EDUCATION', link: '/education' },
-        { label: 'CONTACT', link: '/contact' }
+        { label: 'HOME', id: 'introduction' },
+        { label: 'PROJECTS', id: 'projects' },
+        { label: 'SKILL & EXPERIENCE', id: 'skill-marquee' },
+        { label: 'EDUCATION', id: 'education' },
+        { label: 'CONTACT', id: 'contact' }
     ];
-
-    const { activeButton, setActiveButton } = useButtonStore.getState();
 
     return (
         <>
@@ -73,6 +64,7 @@ function Header() {
                         </Text>
                     </Box>
                     <Flex
+                        visibleFrom="md"
                         direction={{ sm: 'row' }}
                         gap={{ base: 'sm', sm: 'lg' }}
                         justify={{ sm: 'center' }}
@@ -81,30 +73,10 @@ function Header() {
                         }}
                     >
                         {buttons.map((button, index) => (
-                            <Button
-                                visibleFrom="md"
-                                key={index}
-                                variant="transparent"
-                                style={{
-                                    fontWeight: 'semibold',
-                                    fontSize: '1em',
-                                    textDecoration: 'none'
-                                }}
-                                onClick={() => handleButtonClick(index)}
-                            >
-                                <a
-                                    style={{ color: index == (isHovered || activeButton) ? '#18D26E' : 'white', textDecoration: 'none' }}
-                                    href={button.link}
-                                    onMouseEnter={() => (handleButtonHover(index))}
-                                    onMouseLeave={() => handleButtonHover(5)}
-                                    onClick={() => setActiveButton(index)}
-                                >
-                                    {button.label}
-                                </a>
-                            </Button>
+                            <HeaderSection button={button} key={index} />
                         ))}
-                        <Burger hiddenFrom="md" color='white' opened={opened} onClick={toggle} aria-label="Toggle navigation" />
                     </Flex>
+                    <Burger hiddenFrom="md" color='white' opened={opened} onClick={toggle} aria-label="Toggle navigation" />
                 </Box>
             </Portal >
             <Drawer padding='0' opened={opened} onClose={close} size="xs" position="left" withCloseButton={false} style={{ zIndex: 1 }}>
@@ -118,19 +90,7 @@ function Header() {
                     }}
                 >
                     {buttons.map((button, index) => (
-                        <Button
-                            key={index}
-                            variant="transparent"
-                            color={activeButton === index ? 'green' : 'white'}
-                            style={{
-                                fontWeight: 'semibold',
-                                fontSize: '1.1em',
-                            }}
-                            onClick={() => handleButtonClick(index)}
-                        // href={button.link}
-                        >
-                            {button.label}
-                        </Button>
+                        <HeaderSection button={button} key={index} />
                     ))}
                 </Flex>
             </Drawer>
