@@ -1,11 +1,15 @@
 import { Flex, Text } from "@mantine/core"
 import { ExperienceProps } from "../constants/experience.constant"
 import Image from "next/image"
+import useWindowSize from "@/hooks/use-window-size"
 
 const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
+    const { isMobile } = useWindowSize()
+
     return (
         <Flex
             gap='md'
+            direction={isMobile ? 'column' : 'row'}
             style={{
                 padding: '20px',
                 width: '100%',
@@ -21,6 +25,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
                     width: '100%',
                 }}>
                 <Flex
+                    direction={isMobile ? 'column' : 'row'}
                     justify='space-between'
                     style={{
                         width: '100%',
@@ -28,10 +33,11 @@ const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
                 >
                     <Text size="xl" fw={600}>{experience.title}</Text>
 
-                    <Text size='md'>{experience.date}</Text>
+                    <Text size='md' visibleFrom="md">{experience.date}</Text>
                 </Flex>
                 <Text size='lg'>{experience.company}</Text>
-                <Text size='md' c='gray'>{experience.work_type}</Text>
+                <Text size='md' hiddenFrom="md">{experience.date}</Text>
+                <Text size='md' c='gray' visibleFrom="md">{experience.work_type}</Text>
 
                 <Flex direction='column' gap='xs' mt={10}>
                     {
