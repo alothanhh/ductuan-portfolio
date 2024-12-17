@@ -71,7 +71,7 @@ function Introduction() {
                     backgroundImage: 'var(--primary-color)',
                     color: 'transparent',
                     backgroundClip: 'text'
-                }}>Quang Thành (Aiden)</span></Text>
+                }}>Aiden Dang</span></Text>
 
                 <Text style={{
                     // textAlign: 'justify'

@@ -36,10 +36,8 @@ function SkillMarquee() {
                 flexDirection: 'column',
                 gap: '32px',
                 marginTop: '32px',
-                marginBottom: '64px',
+                marginBottom: '32px',
             }}>
-            <Title text='SKILLS' />
-
             <Marquee
                 pauseOnHover
                 autoFill
@@ -49,6 +47,12 @@ function SkillMarquee() {
                     <SkillCard key={index} logo={item} />
                 ))}
             </Marquee>
+            <Title text='SKILLS' />
+
+            <Box>Languages: Typescript, Javascript, C++, Python, Move</Box>
+            <Box>Technologies: NextJS, ReactJS, WEB3, Angular, React Native, TailwindCSS, MongoDB, NestJS</Box>
+            <Box>Front-end Libraries: NextJS, ReactJS, WEB3, Angular, React Native, TailwindCSS, MongoDB, NestJS, etc.</Box>
+            <Box>Tools: NextJS, ReactJS, WEB3, Angular, React Native, TailwindCSS, MongoDB, NestJS</Box>
         </Box>)
 }
 

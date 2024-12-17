@@ -21,8 +21,7 @@ const HeaderSection = ({ button }: { button: { label: string, id: string } }) =>
             style={{
                 fontWeight: 'semibold',
                 fontSize: '1em',
-                textDecoration: 'none',
-                color: hovered ? '#18D26E' : 'white',
+                color: hovered ? 'rgb(26, 247, 169)' : 'white',
             }}
             ref={ref}
             onClick={() => handleButtonClick(button.id)}

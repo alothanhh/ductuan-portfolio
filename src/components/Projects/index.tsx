@@ -22,7 +22,6 @@ const Projects = () => {
                 flexDirection: isMobile ? 'column' : 'row',
                 alignItems: isMobile ? 'center' : '',
                 gap: '32px',
-                margin: '32px 0',
                 padding: '32px',
                 alignContent: 'center',
                 justifyContent: 'space-between',

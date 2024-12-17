@@ -24,7 +24,7 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
                 borderRadius: '8px',
                 backgroundColor: 'white',
                 minHeight: '195px',
-                boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1)'
             }}>
             <Image src={project.image}
                 alt='project'
