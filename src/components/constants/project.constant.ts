@@ -39,4 +39,4 @@ export const PROJECTS_LIST = [
   },
 ];
 
-export type ProjectCardProps = (typeof PROJECTS_LIST)[0];
+export type ProjectCardProps = (typeof PROJECTS_LIST)[number];

@@ -1,9 +1,9 @@
 import { Flex, Text } from "@mantine/core"
-import { ExperienceProps } from "../constants/experience.constant"
+import { SingleRoleExperienceProps } from "../constants/experience.constant"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 
-const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
+const SingleRoleCard = ({ experience }: { experience: SingleRoleExperienceProps }) => {
     const { isMobile } = useWindowSize()
 
     return (
@@ -33,11 +33,11 @@ const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
                 >
                     <Text size="xl" fw={600}>{experience.title}</Text>
 
-                    <Text size='md' visibleFrom="md">{experience.date}</Text>
+                    <Text size='md' visibleFrom="md" fw={500}>{experience.date}</Text>
                 </Flex>
-                <Text size='lg'>{experience.company}</Text>
+                <Text size='lg'>{experience.company_name}</Text>
                 <Text size='md' hiddenFrom="md">{experience.date}</Text>
-                <Text size='md' c='gray' visibleFrom="md">{experience.work_type}</Text>
+                <Text size='md' c='gray' visibleFrom="md">{experience.location}</Text>
 
                 <Flex direction='column' gap='xs' mt={10}>
                     {
@@ -51,4 +51,4 @@ const ExperienceCard = ({ experience }: { experience: ExperienceProps }) => {
     )
 }
 
-export default ExperienceCard
+export default SingleRoleCard

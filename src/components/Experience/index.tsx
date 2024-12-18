@@ -2,9 +2,10 @@ import { ScrollContext } from "@/contexts/ScrollContext";
 import useWindowSize from "@/hooks/use-window-size";
 import { Box, Flex, Text } from "@mantine/core";
 import { useContext } from "react";
-import { EXPERIENCES } from "../constants/experience.constant";
-import ExperienceCard from "./ExperienceCard";
+import { ATOM, XELEX } from "../constants/experience.constant";
 import Title from "../common/Title";
+import SingleRoleCard from "./SingleRoleCard";
+import MultiRoleCard from "./MultiRoleCard";
 
 const Experience = () => {
     const { isMobile } = useWindowSize();
@@ -35,9 +36,8 @@ const Experience = () => {
                 }}
                 gap='md'
             >
-                {EXPERIENCES.map((experience, index) => (
-                    <ExperienceCard key={index} experience={experience} />
-                ))}
+                <MultiRoleCard experience={ATOM} />
+                <SingleRoleCard experience={XELEX} />
             </Flex>
         </Box>
     )
