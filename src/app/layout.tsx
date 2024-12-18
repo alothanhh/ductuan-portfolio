@@ -11,7 +11,7 @@ import ScrollContextProvider from "@/contexts/ScrollContext";
 import { useContext } from "react";
 
 export const metadata: Metadata = {
-  title: "Aiden's Portfolio",
+  title: "Aiden Dang | Portfolio",
   description: "Aiden's Portfolio",
 };
 
