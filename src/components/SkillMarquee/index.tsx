@@ -29,15 +29,16 @@ function SkillMarquee() {
 
     return (
         <Box
-            id="skill-marquee"
-            ref={targetId === 'skill-marquee' ? targetRef : null}
+            // id="skill-marquee"
+            // ref={targetId === 'skill-marquee' ? targetRef : null}
             style={{
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '32px',
                 marginTop: '32px',
+                paddingBottom: '32px',
             }}>
-            <Title text='SKILL & EXPERIENCE' />
+            {/* <Title text='SKILL & EXPERIENCE' /> */}
 
             <Marquee
                 pauseOnHover
@@ -49,7 +50,7 @@ function SkillMarquee() {
                 ))}
             </Marquee>
 
-            <Box
+            {/* <Box
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -65,7 +66,7 @@ function SkillMarquee() {
                 <Box>Front-end Libraries: Redux, Redux Toolkit, React Hook Form, React Query, MUI, Mantine, ChartJs, etc.</Box>
                 <Box>Tools: Git, VSCode, Figma, Sourcetree, Jira Software, Postman, Docker, Adobe Photoshop,
                     Adobe Illustrator</Box>
-            </Box>
+            </Box> */}
         </Box>)
 }
 

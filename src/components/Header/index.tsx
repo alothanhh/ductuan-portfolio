@@ -19,9 +19,9 @@ function Header() {
 
     // Danh sách các nút Button và nội dung tương ứng
     const buttons = [
-        { label: 'HOME', id: 'introduction' },
+        { label: 'ABOUT', id: 'introduction' },
+        { label: 'EXPERIENCE', id: 'experience' },
         { label: 'PROJECTS', id: 'projects' },
-        { label: 'SKILL & EXPERIENCE', id: 'skill-marquee' },
         { label: 'EDUCATION', id: 'education' },
         { label: 'CONTACT', id: 'contact' }
     ];

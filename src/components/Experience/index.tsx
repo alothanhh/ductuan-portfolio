@@ -8,9 +8,12 @@ import Title from "../common/Title";
 
 const Experience = () => {
     const { isMobile } = useWindowSize();
+    const { targetRef, targetId } = useContext(ScrollContext);
 
     return (
         <Box
+            id="experience"
+            ref={targetId === 'experience' ? targetRef : null}
             style={{
                 backgroundColor: '#F7F7F7',
                 display: 'flex',
@@ -21,6 +24,8 @@ const Experience = () => {
                 padding: '40px 32px'
             }}
         >
+            <Title text='EXPERIENCE' />
+
             <Flex
                 direction='column'
                 align='center'
