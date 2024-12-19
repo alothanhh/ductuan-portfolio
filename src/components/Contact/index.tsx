@@ -32,7 +32,7 @@ function Contact() {
                         marginBottom: '32px',
                         alignContent: 'center',
                         justifyContent: 'center',
-                        padding: '32px',
+                        padding: isMobile ? '32px 16px' : '32px',
                     }}
                 >
                     <ContactInfo />

@@ -22,7 +22,7 @@ export const ATOM = {
   roles: [
     {
       title: "Frontend Developer",
-      date: "Jul 2024 - Present • 5 mos",
+      date: "Jul 2024 - Present",
       description: [
         "• Participated in the project to develop payment solutions for the banking sector.",
         "• Collaborated with the team to design and implement new features, ensuring seamless and scalability.",
@@ -30,7 +30,7 @@ export const ATOM = {
     },
     {
       title: "Frontend Intern",
-      date: "Apr 2024 - Jul 2024 • 4 mos",
+      date: "Apr 2024 - Jul 2024",
       description: [
         "• Researched and learned about the latest technologies on blockchain, such as Ethereum, SUI and Aptos.",
         "• Collaborated with the team to develop a new feature of a decentralized web application (dApp) for creating and answering quizzes on-chain.",

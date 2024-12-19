@@ -22,7 +22,7 @@ const Projects = () => {
                 flexDirection: isMobile ? 'column' : 'row',
                 alignItems: isMobile ? 'center' : '',
                 gap: '32px',
-                padding: '32px',
+                padding: isMobile ? '32px 16px' : '32px',
                 alignContent: 'center',
                 justifyContent: 'space-between',
                 backgroundColor: 'rgb(247, 247, 247)'

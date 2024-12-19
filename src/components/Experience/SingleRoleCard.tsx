@@ -8,7 +8,7 @@ const SingleRoleCard = ({ experience }: { experience: SingleRoleExperienceProps 
 
     return (
         <Flex
-            gap='md'
+            gap={isMobile ? '0' : 'md'}
             direction={isMobile ? 'column' : 'row'}
             style={{
                 padding: '20px',

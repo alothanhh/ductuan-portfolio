@@ -39,7 +39,7 @@ function Introduction() {
             ref={targetId === 'introduction' ? targetRef : null}
             style={{
                 backgroundColor: '#F7F7F7',
-                padding: isMobile ? '64px 0 64px 64px' : '64px 128px',
+                padding: isMobile ? '32px 0 32px 32px' : '64px 128px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

@@ -1,5 +1,6 @@
 'use client'
 import Contact from "@/components/Contact";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Introduction from "@/components/Introduction";
 import Projects from "@/components/Projects";
@@ -17,6 +18,7 @@ export default function Home() {
       <SkillMarquee />
       <Experience />
       <Projects />
+      <Education />
       <Contact />
     </main >
   );

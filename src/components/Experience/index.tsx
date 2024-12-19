@@ -22,7 +22,7 @@ const Experience = () => {
                 justifyContent: 'center',
                 gap: '32px',
                 alignItems: 'center',
-                padding: '40px 32px'
+                padding: isMobile ? '32px 16px' : '40px 32px'
             }}
         >
             <Title text='EXPERIENCE' />

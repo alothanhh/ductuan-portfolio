@@ -31,8 +31,9 @@ const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps })
                     {
                         experience.roles.map((role, index) => (
                             <Flex
+                                pl={isMobile ? 32 : 0}
                                 key={role.title}
-                                gap='xs'
+                                gap={4}
                                 direction='column'
                                 pos='relative'
                             >
@@ -42,33 +43,27 @@ const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps })
                                     height: '8px',
                                     borderRadius: '100%',
                                     position: 'absolute',
-                                    left: '-30px',
+                                    left: isMobile ? '0' : '-30px',
                                     top: '10px'
                                 }} />
 
                                 {index !== experience.roles.length - 1 && <span style={{
                                     backgroundColor: 'var(--mantine-color-gray-5)',
                                     width: '2px',
-                                    height: '110%',
+                                    height: isMobile ? '108%' : '110%',
                                     position: 'absolute',
-                                    left: '-27px',
+                                    left: isMobile ? '3px' : '-27px',
                                     top: '10px'
                                 }} />}
-                                <Flex
-                                    w='100%'
-                                    direction={isMobile ? 'column' : 'row'}
-                                    justify='space-between'
-                                >
-                                    <Text size='lg' fw={600}>{role.title}</Text>
-                                    <Text size='md' fw={500}>{role.date}</Text>
-                                </Flex>
+
+                                <Text size='lg' fw={600}>{role.title}</Text>
+                                <Text size='md' fw={500} c="gray">{role.date}</Text>
 
                                 <Flex direction='column' gap={4}>
                                     {role.description.map((desc) => (
                                         <Text size='md' key={index}>{desc}</Text>
                                     ))}
                                 </Flex>
-
                             </Flex>
                         ))
                     }
