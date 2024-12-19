@@ -32,11 +32,9 @@ const SingleRoleCard = ({ experience }: { experience: SingleRoleExperienceProps 
                     }}
                 >
                     <Text size="xl" fw={600}>{experience.title}</Text>
-
-                    <Text size='md' visibleFrom="md" fw={500}>{experience.date}</Text>
                 </Flex>
                 <Text size='lg'>{experience.company_name}</Text>
-                <Text size='md' hiddenFrom="md">{experience.date}</Text>
+                <Text size='md' c='gray' >{experience.date}</Text>
                 <Text size='md' c='gray' visibleFrom="md">{experience.location}</Text>
 
                 <Flex direction='column' gap='xs' mt={10}>
