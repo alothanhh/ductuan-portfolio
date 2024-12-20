@@ -61,7 +61,7 @@ const Education = () => {
                             {/* <Text size='sm' c='gray'>Issued by Vietnam National University - Ho Chi Minh City</Text> */}
                         </List.Item>
                         <List.Item>
-                            <Text size='md'>Fossil Scholarship 2022</Text>
+                            <Text size='md'>Fossil Scholarship 2022 | EMPOWERING IT YOUTH</Text>
                             {/* <Text size='sm' c='gray'>Issued by Fossil Group | EMPOWERING IT YOUTH</Text> */}
                         </List.Item>
                         <List.Item>

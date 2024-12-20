@@ -32,12 +32,6 @@ function About() {
         document.body.removeChild(link);
     };
 
-    const [isOpen, setIsOpen] = useState(false);
-    const handlePreviewCv = () => {
-        // setIsOpen(true);
-
-    }
-
     return <ScrollFadeUp repeat>
         <Box
             id="about"
