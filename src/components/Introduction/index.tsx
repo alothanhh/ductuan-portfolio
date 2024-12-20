@@ -1,6 +1,6 @@
 'use client'
 /* eslint-disable react/no-unescaped-entities */
-import { Avatar, Box, Button, Text, useHovered } from "@mantine/core"
+import { Avatar, Box, Button, Flex, Text, useHovered } from "@mantine/core"
 import icPhone from "@/assets/icons/icPhone.svg"
 import icEmail from "@/assets/icons/icEmail.svg"
 import icPlaceMarker from "@/assets/icons/icPlaceMarker.svg"
@@ -9,8 +9,9 @@ import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import ScrollFadeUp from "../shared/scroll-fade-up"
 import { useHover } from "@mantine/hooks"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
+import Link from "next/link"
 
 function Introduction() {
     const { isMobile } = useWindowSize();
@@ -32,6 +33,11 @@ function Introduction() {
         document.body.removeChild(link);
     };
 
+    const [isOpen, setIsOpen] = useState(false);
+    const handlePreviewCv = () => {
+        // setIsOpen(true);
+
+    }
 
     return <ScrollFadeUp repeat>
         <Box
@@ -138,18 +144,25 @@ function Introduction() {
                         </Box>
                     </Box>
 
-                    <Button
-                        ref={ref}
-                        onClick={handleDownload}
-                        style={{
-                            width: 'max-content',
-                            backgroundSize: '200%',
-                            transition: 'background-position 0.8s ease, color 0.3s ease',
-                            backgroundImage: hovered
-                                ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
-                                : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
-                            backgroundPosition: hovered ? '100% 0' : '0% 0',
-                        }}>DOWNLOAD CV</Button>
+                    <Flex gap={4}>
+                        <Link href="/cv-preview" target="_blank">
+                            <Button variant="outline" c='rgb(8, 205, 218)' style={{
+                                borderColor: 'rgb(8, 205, 218)',
+                            }}>PREVIEW CV</Button>
+                        </Link>
+                        <Button
+                            ref={ref}
+                            onClick={handleDownload}
+                            style={{
+                                width: 'max-content',
+                                backgroundSize: '200%',
+                                transition: 'background-position 0.8s ease, color 0.3s ease',
+                                backgroundImage: hovered
+                                    ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
+                                    : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
+                                backgroundPosition: hovered ? '100% 0' : '0% 0',
+                            }}>DOWNLOAD CV</Button>
+                    </Flex>
                 </Box>
             </Box>
 
