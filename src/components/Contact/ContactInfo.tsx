@@ -34,7 +34,9 @@ function ContactInfo() {
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '8px',
+                gap: '12px',
+                justifyContent: 'space-between',
+                height: '100%'
             }}>
                 {
                     CONTACT_CARD_INFO.map((item, index) => (

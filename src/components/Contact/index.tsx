@@ -29,7 +29,6 @@ function Contact() {
                         display: 'flex',
                         flexDirection: isMobile ? 'column' : 'row',
                         gap: '32px',
-                        marginBottom: '32px',
                         alignContent: 'center',
                         justifyContent: 'center',
                         padding: isMobile ? '32px 16px' : '32px',

@@ -19,7 +19,7 @@ function ContactCard({ logo, title, description }: Props) {
         <div
             onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}
             style={{
-                padding: '20px 16px',
+                padding: '22px 16px',
                 backgroundColor: '#F7F7F7',
                 borderRadius: '8px',
                 width: '100%',
