@@ -1,16 +1,15 @@
 'use client'
 import { Box, Button, Text } from "@mantine/core";
 import { Title } from "@mantine/core";
-import { useHover } from "@mantine/hooks";
 import ProjectList from "./ProjectList";
 import { IconArrowNarrowUp, IconArrowRight } from "@tabler/icons-react";
 import useWindowSize from "@/hooks/use-window-size";
 import { useContext } from "react";
 import { ScrollContext } from "@/contexts/ScrollContext";
 import Link from "next/link";
+import classes from '@/styles/Button.module.css'
 
 const Projects = () => {
-    const { hovered, ref } = useHover<HTMLButtonElement>();
     const { isMobile } = useWindowSize()
     const { targetRef, targetId } = useContext(ScrollContext);
 
@@ -38,25 +37,18 @@ const Projects = () => {
             }}>
                 <Title>PROJECTS</Title>
                 <Text size="md">A curated selection of my web projects.</Text>
-                <Link href="/projects">
+                <Link href="/projects" style={{ textDecoration: 'none' }}>
                     <Button
-                        ref={ref}
                         rightSection={<IconArrowRight size={20} />}
+                        className={classes['button-gradient']}
                         style={{
-                            width: 'max-content',
                             display: isMobile ? 'none' : 'flex',
-                            backgroundSize: '200%',
-                            transition: 'background-position 0.8s ease, color 0.3s ease',
-                            backgroundImage: hovered
-                                ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
-                                : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
-                            backgroundPosition: hovered ? '100% 0' : '0% 0',
-                        }} color="rgb(26, 247, 169)">See all</Button>
+                        }}>See all</Button>
                 </Link>
             </Box>
 
             <ProjectList />
-        </Box>
+        </Box >
     );
 };
 

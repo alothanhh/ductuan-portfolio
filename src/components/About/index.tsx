@@ -8,14 +8,13 @@ import imgAvatar from "@/assets/images/imgAvatar.jpg"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import ScrollFadeUp from "../shared/scroll-fade-up"
-import { useHover } from "@mantine/hooks"
 import { useContext, useState } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import Link from "next/link"
+import classes from '@/styles/Button.module.css'
 
 function About() {
     const { isMobile } = useWindowSize();
-    const { hovered, ref } = useHover<HTMLButtonElement>();
     const { targetRef, targetId } = useContext(ScrollContext);
 
     const handleDownload = () => {
@@ -151,17 +150,9 @@ function About() {
                             }}>PREVIEW CV</Button>
                         </Link>
                         <Button
-                            ref={ref}
                             onClick={handleDownload}
-                            style={{
-                                width: 'max-content',
-                                backgroundSize: '200%',
-                                transition: 'background-position 0.8s ease, color 0.3s ease',
-                                backgroundImage: hovered
-                                    ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
-                                    : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
-                                backgroundPosition: hovered ? '100% 0' : '0% 0',
-                            }}>DOWNLOAD CV</Button>
+                            className={classes['button-gradient']}
+                        >DOWNLOAD CV</Button>
                     </Flex>
                 </Box>
             </Box>

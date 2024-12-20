@@ -3,12 +3,8 @@ import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
-import styles from "./styles.module.css"
-import Header from "@/components/Header";
 import MantineRegistry from "@/contexts/MantineRegistry";
-import { useButtonStore } from '../contexts/ActiveButtonStore';
 import ScrollContextProvider from "@/contexts/ScrollContext";
-import { useContext } from "react";
 
 export const metadata: Metadata = {
   title: "Aiden Dang | Portfolio",
