@@ -6,6 +6,7 @@ import { useContext } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import Title from "../common/Title"
 import Link from "next/link"
+import { IconAward, IconBriefcase, IconCertificate, IconCheck } from "@tabler/icons-react"
 
 const Education = () => {
     const { isMobile } = useWindowSize()
@@ -47,45 +48,66 @@ const Education = () => {
                 >
                     <Text size="xl" fw={600}>Ho Chi Minh City University of Technology (HCMUT)</Text>
 
-                    <Text size='lg'>Oct 2020 - June 2024</Text>
+                    <Text size='lg' fw={600}>Oct 2020 - June 2024</Text>
                 </Flex>
                 {/* <Text size='lg'>Ho Chi Minh City University of Technology (HCMUT)</Text> */}
                 <Text size='md' >Bachelor&apos;s degree, Computer Science</Text>
-                <Text size='md' visibleFrom="md">GPA: 3.4/4 (or 8.05/10)</Text>
+                <Text size='md' visibleFrom="md">GPA: 8.05/10 (or 3.4/4)</Text> <Link href={''}>Transcript</Link>
 
                 <Flex direction='column' gap='xs' mt={10}>
-                    <Text size="lg" fw={600}>Achievement & Certicicates</Text>
+                    <Text size="lg" fw={600}>Achievement</Text>
                     <List>
-                        <List.Item>
-                            <Text size='md'>Student with Five Good Merits Award (Ho Chi Minh City level)</Text>
-                            {/* <Text size='sm' c='gray'>Issued by Vietnam National University - Ho Chi Minh City</Text> */}
+                        <List.Item
+                            icon={<IconAward size={16} />}>
+                            <Text size='md'>Student with Five Good Merits Award</Text>
+                            <Text size='sm' c='gray'>Issued by VNU-HCM & Ho Chi Minh City</Text>
                         </List.Item>
-                        <List.Item>
-                            <Text size='md'>Fossil Scholarship 2022 | EMPOWERING IT YOUTH</Text>
-                            {/* <Text size='sm' c='gray'>Issued by Fossil Group | EMPOWERING IT YOUTH</Text> */}
+                        <List.Item
+                            icon={<IconAward size={16} />}
+                        >
+                            <Text size='md'>Fossil Scholarship</Text>
+                            <Text size='sm' c='gray'>Issued by Fossil Group | EMPOWERING IT YOUTH</Text>
                         </List.Item>
-                        <List.Item>
-                            <Text size='md'>Encouragement Scholarship (Term 2/2024)</Text>
+                        <List.Item
+                            icon={<IconAward size={16} />}
+                        >
+                            <Text size='md'>CSE Alumni Scholarship</Text>
+                            <Text size='sm' c='gray'>Issued by Alumni of the CSE Faculty</Text>
                         </List.Item>
-                        <List.Item>
+                        {/* <List.Item>
+                            <Text size='md'>Encouragement Scholarship <span style={{ color: 'gray' }}>| 1 Term</span> </Text>
+                        </List.Item> */}
+                    </List>
+
+                    <Text size="lg" fw={600}>Certicicates</Text>
+                    <List>
+                        <List.Item
+                            icon={<IconCertificate size={16} />}
+                        >
                             <Text size='md'>Software Development with Scrum Certificate</Text>
-                            {/* <Text size='sm' c='gray'>Certified by Axon Active</Text> */}
+                            <Text size='sm' c='gray'>Certified by Axon Active</Text>
                         </List.Item>
-                        <List.Item>
+                        <List.Item
+                            icon={<IconCertificate size={16} />}
+                        >
                             <Text size='md'>TOEIC Reading & Listening | Score: 680</Text>
                         </List.Item>
                     </List>
 
                     <Text size="lg" fw={600}>Extracurricular Activity</Text>
                     <List>
-                        <List.Item>
-                            <Text size='md'>CSE Multimedia:</Text>
-                            <Text size='md' c='gray'>Lead of design team: Design media publications and other products for events such as the CSE Job Fair, the
+                        <List.Item
+                            icon={<IconBriefcase size={16} />}
+                        >
+                            <Text size='md'>CSE Multimedia</Text>
+                            <Text size='sm' c='gray'>Lead of design team: Design media publications and other products for events such as the CSE Job Fair, the
                                 Green Summer Volunteer Campaign, etc <Link href={''}>Explore my Gallery</Link></Text>
                         </List.Item>
-                        <List.Item>
+                        <List.Item
+                            icon={<IconBriefcase size={16} />}
+                        >
                             <Text size='md'>Spring Volunteer Campaign of CSE Faculty 2020 - 2021</Text>
-                            <Text size='md' c='gray'>Volunteer: Support less fortunate people and primary students</Text>
+                            <Text size='sm' c='gray'>Volunteer: Support less fortunate people and primary students</Text>
                         </List.Item>
                     </List>
                     {/* {
