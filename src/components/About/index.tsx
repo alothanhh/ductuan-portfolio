@@ -1,10 +1,12 @@
 'use client'
 /* eslint-disable react/no-unescaped-entities */
-import { Avatar, Box, Button, Flex, Text, useHovered } from "@mantine/core"
+import { Avatar, Box, Button, Flex, Text } from "@mantine/core"
 import icPhone from "@/assets/icons/icPhone.svg"
 import icEmail from "@/assets/icons/icEmail.svg"
 import icPlaceMarker from "@/assets/icons/icPlaceMarker.svg"
-import imgAvatar from "@/assets/images/imgAvatar.jpg"
+import imgAvatarHover from "@/assets/images/imgAvatar.png"
+import imgAvatarFocus from "@/assets/images/imgAvatar_2.jpg"
+import imgAvatar from "@/assets/images/imgAvatar_3.jpg"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import ScrollFadeUp from "../shared/scroll-fade-up"
@@ -12,6 +14,7 @@ import { useContext, useState } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import Link from "next/link"
 import classes from '@/styles/Button.module.css'
+import { useHover } from "@mantine/hooks"
 
 function About() {
     const { isMobile } = useWindowSize();
@@ -38,7 +41,7 @@ function About() {
             ref={targetId === 'about' ? targetRef : null}
             style={{
                 backgroundColor: '#F7F7F7',
-                padding: isMobile ? '32px 0 32px 32px' : '64px 128px',
+                padding: isMobile ? '32px' : '64px 128px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -50,6 +53,7 @@ function About() {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '8px',
+                    width: '100%',
                     maxWidth: '700px',
                 }}>
 
@@ -72,9 +76,23 @@ function About() {
                     backgroundClip: 'text'
                 }}>Aiden Dang</span></Text>
 
-                <Text style={{
-                    // textAlign: 'justify'
-                }}>Dedicated front-end developer skills, merging creativity with technical expertise for visually appealing and user-centric websites.</Text>
+                <Image
+                    src={imgAvatarFocus}
+                    alt="it's me"
+                    width={150}
+                    height={150}
+                    quality={100}
+                    style={{
+                        objectFit: 'cover',
+                        minWidth: '150px',
+                        borderRadius: '100%',
+                        display: isMobile ? 'block' : 'none',
+                        margin: "8px 0",
+                        alignSelf: 'center',
+                    }}
+                />
+
+                <Text>Dedicated front-end developer skills, merging creativity with technical expertise for visually appealing and user-centric websites.</Text>
 
                 <Box id="contact-and-download-cv" style={{
                     display: 'flex',
@@ -132,7 +150,7 @@ function About() {
                                 <Text style={{
                                     fontSize: '16px',
                                     lineHeight: '32px',
-                                }}>thanh.dangquang@gmail.com</Text>
+                                }}>thanh.dangquang28@gmail.com</Text>
                             </Box>
                         </Box>
                     </Box>
@@ -151,12 +169,18 @@ function About() {
                 </Box>
             </Box>
 
-            <Avatar
-                src={''}
+            <Image
+                src={imgAvatarFocus}
                 alt="it's me"
-                size={250}
-                style={{ borderRadius: '50%', objectFit: 'cover', color: 'green' }}
-                visibleFrom={'md'}
+                width={300}
+                height={300}
+                quality={100}
+                style={{
+                    objectFit: 'cover',
+                    minWidth: '300px',
+                    borderRadius: '100%',
+                    display: isMobile ? 'none' : 'block',
+                }}
             />
         </Box >
     </ScrollFadeUp >

@@ -51,7 +51,7 @@ const Education = () => {
                 </Flex>
                 {/* <Text size='lg'>Ho Chi Minh City University of Technology (HCMUT)</Text> */}
                 <Text size='md' >Bachelor&apos;s degree, Computer Science</Text>
-                <Text size='md' visibleFrom="md">GPA: 3.4/10 (or 8.05/10)</Text>
+                <Text size='md' visibleFrom="md">GPA: 3.4/4 (or 8.05/10)</Text>
 
                 <Flex direction='column' gap='xs' mt={10}>
                     <Text size="lg" fw={600}>Achievement & Certicicates</Text>
