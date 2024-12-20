@@ -4,7 +4,12 @@ import { Button } from "@mantine/core"
 import { useHover } from "@mantine/hooks";
 import { useContext } from "react";
 
-const HeaderSection = ({ button }: { button: { label: string, id: string } }) => {
+type HeaderSectionProps = {
+    button: { label: string, id: string };
+    onClose: () => void;
+}
+
+const HeaderSection = ({ button, onClose }: HeaderSectionProps) => {
     const { ref, hovered } = useHover<HTMLButtonElement>();
 
     // const { activeButton, setActiveButton } = useButtonStore.getState();
@@ -13,6 +18,7 @@ const HeaderSection = ({ button }: { button: { label: string, id: string } }) =>
 
     const handleButtonClick = (id: string) => {
         handleClick(id)
+        onClose()
     }
 
     return (

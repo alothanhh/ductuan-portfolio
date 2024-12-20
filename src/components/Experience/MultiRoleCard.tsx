@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@mantine/core"
+import { Box, Flex, Text, Timeline, ThemeIcon } from "@mantine/core"
 import { MultiRoleExperienceProps } from "../constants/experience.constant"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
@@ -23,51 +23,26 @@ const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps })
                 <Text size="xl" fw={600}>{experience.company_name}</Text>
                 <Text size='md' c='gray' visibleFrom="md">{experience.location}</Text>
 
-                <Flex
-                    pt={10}
-                    gap={10}
-                    direction='column'
-                >
+                <Timeline active={1} bulletSize={16} lineWidth={2} color='rgb(26, 247, 169)' pt='lg'>
                     {
                         experience.roles.map((role, index) => (
-                            <Flex
-                                pl={isMobile ? 32 : 0}
-                                key={role.title}
-                                gap={4}
-                                direction='column'
-                                pos='relative'
+                            <Timeline.Item key={role.title} fz='lg' title={role.title} bullet={<ThemeIcon
+                                size={16}
+                                variant="gradient"
+                                gradient={{ from: 'rgb(26, 247, 169)', to: 'rgb(8, 205, 218)' }}
+                                radius="xl"
                             >
-                                <span style={{
-                                    backgroundColor: 'var(--mantine-color-gray-5)',
-                                    width: '8px',
-                                    height: '8px',
-                                    borderRadius: '100%',
-                                    position: 'absolute',
-                                    left: isMobile ? '0' : '-30px',
-                                    top: '10px'
-                                }} />
-
-                                {index !== experience.roles.length - 1 && <span style={{
-                                    backgroundColor: 'var(--mantine-color-gray-5)',
-                                    width: '2px',
-                                    height: isMobile ? '108%' : '110%',
-                                    position: 'absolute',
-                                    left: isMobile ? '3px' : '-27px',
-                                    top: '10px'
-                                }} />}
-
-                                <Text size='lg' fw={600}>{role.title}</Text>
-                                <Text size='md' fw={500} c="gray">{role.date}</Text>
-
+                            </ThemeIcon>}>
+                                <Text size='md' c='gray'>{role.date}</Text>
                                 <Flex direction='column' gap={4}>
                                     {role.description.map((desc) => (
                                         <Text size='md' key={index}>{desc}</Text>
                                     ))}
                                 </Flex>
-                            </Flex>
+                            </Timeline.Item>
                         ))
                     }
-                </Flex>
+                </Timeline>
             </Flex>
         </Flex >
     )

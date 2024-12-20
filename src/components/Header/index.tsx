@@ -73,7 +73,7 @@ function Header() {
                         }}
                     >
                         {buttons.map((button, index) => (
-                            <HeaderSection button={button} key={index} />
+                            <HeaderSection button={button} key={index} onClose={close} />
                         ))}
                     </Flex>
                     <Burger hiddenFrom="md" color='white' opened={opened} onClick={toggle} aria-label="Toggle navigation" />
@@ -90,7 +90,7 @@ function Header() {
                     }}
                 >
                     {buttons.map((button, index) => (
-                        <HeaderSection button={button} key={index} />
+                        <HeaderSection button={button} key={index} onClose={close} />
                     ))}
                 </Flex>
             </Drawer>

@@ -5,6 +5,7 @@ import useWindowSize from "@/hooks/use-window-size"
 import { useContext } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import Title from "../common/Title"
+import Link from "next/link"
 
 const Education = () => {
     const { isMobile } = useWindowSize()
@@ -80,7 +81,7 @@ const Education = () => {
                         <List.Item>
                             <Text size='md'>CSE Multimedia:</Text>
                             <Text size='md' c='gray'>Lead of design team: Design media publications and other products for events such as the CSE Job Fair, the
-                                Green Summer Volunteer Campaign, etc</Text>
+                                Green Summer Volunteer Campaign, etc <Link href={''}>Explore my Gallery</Link></Text>
                         </List.Item>
                         <List.Item>
                             <Text size='md'>Spring Volunteer Campaign of CSE Faculty 2020 - 2021</Text>
