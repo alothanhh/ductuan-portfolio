@@ -25,7 +25,6 @@ export default function RootLayout({
       <body className={GeistSans.className}>
         <MantineRegistry>
           <ScrollContextProvider>
-            <Header />
             {children}
           </ScrollContextProvider >
         </MantineRegistry>

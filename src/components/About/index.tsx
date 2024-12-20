@@ -13,7 +13,7 @@ import { useContext, useState } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import Link from "next/link"
 
-function Introduction() {
+function About() {
     const { isMobile } = useWindowSize();
     const { hovered, ref } = useHover<HTMLButtonElement>();
     const { targetRef, targetId } = useContext(ScrollContext);
@@ -41,8 +41,8 @@ function Introduction() {
 
     return <ScrollFadeUp repeat>
         <Box
-            id="introduction"
-            ref={targetId === 'introduction' ? targetRef : null}
+            id="about"
+            ref={targetId === 'about' ? targetRef : null}
             style={{
                 backgroundColor: '#F7F7F7',
                 padding: isMobile ? '32px 0 32px 32px' : '64px 128px',
@@ -177,4 +177,4 @@ function Introduction() {
     </ScrollFadeUp >
 }
 
-export default Introduction
+export default About

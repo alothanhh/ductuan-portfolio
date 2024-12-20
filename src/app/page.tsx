@@ -2,7 +2,8 @@
 import Contact from "@/components/Contact";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
-import Introduction from "@/components/Introduction";
+import Header from "@/components/Header";
+import About from "@/components/About";
 import Projects from "@/components/Projects";
 import SkillMarquee from "@/components/SkillMarquee";
 import { ScrollContext } from "@/contexts/ScrollContext";
@@ -14,7 +15,8 @@ export default function Home() {
       marginTop: '70px',
       width: 'device-width',
     }}>
-      <Introduction />
+      <Header />
+      <About />
       <SkillMarquee />
       <Experience />
       <Projects />

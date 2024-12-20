@@ -13,13 +13,11 @@ import HeaderSection from './Header-Section';
 function Header() {
 
     const pinned = useHeadroom({ fixedAt: 120 });
-
-
     const [opened, { toggle, close }] = useDisclosure();
 
     // Danh sách các nút Button và nội dung tương ứng
     const buttons = [
-        { label: 'ABOUT', id: 'introduction' },
+        { label: 'ABOUT', id: 'about' },
         { label: 'EXPERIENCE', id: 'experience' },
         { label: 'PROJECTS', id: 'projects' },
         { label: 'EDUCATION', id: 'education' },

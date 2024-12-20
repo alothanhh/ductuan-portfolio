@@ -57,7 +57,7 @@ const Education = () => {
                     <Text size="lg" fw={600}>Achievement & Certicicates</Text>
                     <List>
                         <List.Item>
-                            <Text size='md'>Student with Five Good Merits Award</Text>
+                            <Text size='md'>Student with Five Good Merits Award (Ho Chi Minh City level)</Text>
                             {/* <Text size='sm' c='gray'>Issued by Vietnam National University - Ho Chi Minh City</Text> */}
                         </List.Item>
                         <List.Item>
@@ -65,7 +65,7 @@ const Education = () => {
                             {/* <Text size='sm' c='gray'>Issued by Fossil Group | EMPOWERING IT YOUTH</Text> */}
                         </List.Item>
                         <List.Item>
-                            <Text size='md'>Encouragement Scholarship (Term 2 - 2024)</Text>
+                            <Text size='md'>Encouragement Scholarship (Term 2/2024)</Text>
                         </List.Item>
                         <List.Item>
                             <Text size='md'>Software Development with Scrum Certificate</Text>

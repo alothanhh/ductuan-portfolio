@@ -5,6 +5,7 @@ import { PROJECTS_LIST } from "../constants/project.constant"
 import { useState } from "react"
 import { useHover } from "@mantine/hooks"
 import { IconArrowRight } from "@tabler/icons-react"
+import Link from "next/link"
 
 const ProjectList = () => {
     const [activeCard, setActiveCard] = useState<number | null>(null)
@@ -32,18 +33,20 @@ const ProjectList = () => {
                 </div>
             ))}
 
-            <Button
-                ref={ref}
-                rightSection={<IconArrowRight size={20} />}
-                style={{
-                    width: 'max-content',
-                    backgroundSize: '200%',
-                    transition: 'background-position 0.8s ease, color 0.3s ease',
-                    backgroundImage: hovered
-                        ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
-                        : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
-                    backgroundPosition: hovered ? '100% 0' : '0% 0',
-                }} color="rgb(26, 247, 169)">See all</Button>
+            <Link href="/projects">
+                <Button
+                    ref={ref}
+                    rightSection={<IconArrowRight size={20} />}
+                    style={{
+                        width: 'max-content',
+                        backgroundSize: '200%',
+                        transition: 'background-position 0.8s ease, color 0.3s ease',
+                        backgroundImage: hovered
+                            ? 'linear-gradient(90deg, rgb(26, 247, 169), rgb(8, 205, 218), rgb(26, 247, 169))'
+                            : 'linear-gradient(90deg, rgb(8, 205, 218), rgb(26, 247, 169), rgb(8, 205, 218))',
+                        backgroundPosition: hovered ? '100% 0' : '0% 0',
+                    }} color="rgb(26, 247, 169)">See all</Button>
+            </Link>
         </Box>
     )
 }

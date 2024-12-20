@@ -2,6 +2,7 @@ import { useButtonStore } from "@/contexts/ActiveButtonStore";
 import { ScrollContext } from "@/contexts/ScrollContext";
 import { Button } from "@mantine/core"
 import { useHover } from "@mantine/hooks";
+import { usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 
 type HeaderSectionProps = {
@@ -11,12 +12,10 @@ type HeaderSectionProps = {
 
 const HeaderSection = ({ button, onClose }: HeaderSectionProps) => {
     const { ref, hovered } = useHover<HTMLButtonElement>();
-
-    // const { activeButton, setActiveButton } = useButtonStore.getState();
-
     const { handleClick } = useContext(ScrollContext);
 
     const handleButtonClick = (id: string) => {
+        // scroll function
         handleClick(id)
         onClose()
     }

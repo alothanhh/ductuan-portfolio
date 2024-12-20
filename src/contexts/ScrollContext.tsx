@@ -18,7 +18,7 @@ const ScrollContextProvider = ({ children }: { children: React.ReactNode }) => {
     const handleClick = async (id: string) => {
         await setTargetId(id)
 
-        if (id === 'introduction') {
+        if (id === 'about') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         else {
