@@ -25,6 +25,24 @@ input, button, textarea, select {
   font: inherit;
 }
 
+.input-field {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+.input-error {
+  border: 1px solid red;
+  color: red;
+}
+
+.input_error::placeholder {
+  color: red
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }

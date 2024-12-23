@@ -4,7 +4,8 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import "./globals.css";
 import MantineRegistry from "@/contexts/MantineRegistry";
-import ScrollContextProvider from "@/contexts/ScrollContext";
+import AppProvider from "@/providers";
+import ScrollProvider from "@/contexts/ScrollContext";
 
 export const metadata: Metadata = {
   title: "Aiden Dang | Portfolio",
@@ -20,9 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <MantineRegistry>
-          <ScrollContextProvider>
+          <AppProvider>
             {children}
-          </ScrollContextProvider >
+          </AppProvider>
         </MantineRegistry>
       </body>
     </html>

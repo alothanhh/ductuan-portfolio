@@ -1,5 +1,5 @@
 import ProjectList from "@/components/Projects/ProjectList"
-import { Box, Flex, Grid, Text, Title } from "@mantine/core"
+import { Box, Grid, Text, Title } from "@mantine/core"
 
 const Projects = () => {
     return (

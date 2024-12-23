@@ -11,7 +11,7 @@ export const ScrollContext = createContext<{
     handleClick: () => { },
 });
 
-const ScrollContextProvider = ({ children }: { children: React.ReactNode }) => {
+const ScrollProvider = ({ children }: { children: React.ReactNode }) => {
     const targetRef = useRef<HTMLDivElement | null>(null);
     const [targetId, setTargetId] = useState<string>('');
 
@@ -33,4 +33,4 @@ const ScrollContextProvider = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export default ScrollContextProvider
+export default ScrollProvider

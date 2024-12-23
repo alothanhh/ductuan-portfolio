@@ -1,0 +1,28 @@
+<svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <circle
+        cx="16"
+        cy="16"
+        r="12"
+        fill="#06B6D4"
+        opacity="0.2"
+        stroke="#06B6D4"
+        strokeWidth="2"
+    />
+    <path
+        d="M16 10V17"
+        stroke="#06B6D4"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    />
+    <path
+        d="M16 23C16.8284 23 17.5 22.3284 17.5 21.5C17.5 20.6716 16.8284 20 16 20C15.1716 20 14.5 20.6716 14.5 21.5C14.5 22.3284 15.1716 23 16 23Z"
+        fill="#06B6D4"
+    />
+</svg>

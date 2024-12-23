@@ -36,7 +36,8 @@ function ContactInfo() {
                 flexDirection: 'column',
                 gap: '12px',
                 justifyContent: 'space-between',
-                height: '100%'
+                height: '100%',
+                maxHeight: '312px'
             }}>
                 {
                     CONTACT_CARD_INFO.map((item, index) => (

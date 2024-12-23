@@ -1,50 +1,62 @@
 import { Mulish } from "next/font/google"
 import React, { InputHTMLAttributes } from "react"
+import { Control, Controller, FieldValues, Path, useFormState, useWatch } from "react-hook-form"
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
+interface InputProps<T extends FieldValues> extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
     label: string,
+    name: Path<T>
+    control: Control<T>
     multiline?: boolean
 }
 
-function InputField({ label, multiline, ...props }: InputProps) {
-    return <>
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '8px',
-            marginBottom: '8px',
-        }}>
-            <p style={{
-                fontSize: '16px',
-                lineHeight: '20px',
-                fontWeight: 600,
-            }}>{label}</p>
-            {!multiline ? <input
-                style={{
-                    width: '100%',
-                    border: 'none',
-                    padding: '8px',
-                    fontSize: '14px',
-                    borderRadius: '8px',
-                    outline: 'none',
-                    height: '32px',
-                }}
-                {...props}
-            /> : <textarea
-                style={{
-                    width: '100%',
-                    border: 'none',
-                    padding: '8px',
-                    fontSize: '14px',
-                    borderRadius: '8px',
-                    outline: 'none',
-                    height: `140px`,
-                }}
-                onChange={(e) => console.log(e.target.value)}
-                {...props}
-            />}
-        </div>
-    </>
+function InputField<T extends FieldValues>({ label, multiline, name, control, ...props }: InputProps<T>) {
+    const values = useWatch({ control })
+    const { errors } = useFormState({ control })
+
+    return (
+        <Controller
+            name={name}
+            control={control}
+            render={({ field }) => {
+                const controlledField = { ...field, value: values[name] || '' }
+                return (
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '8px',
+                        marginBottom: '8px',
+                    }}>
+                        <p style={{
+                            fontSize: '16px',
+                            lineHeight: '20px',
+                            fontWeight: 600,
+                        }}>{label}</p>
+                        {!multiline ?
+                            <input
+                                className={`input-field ${errors[name] && 'input-error'}`}
+                                style={{
+                                    color: errors[name] ? 'red' : 'black',
+                                    height: '32px',
+                                }}
+                                {...props}
+                                {...controlledField}
+                            /> : <textarea
+                                className={`input-field ${errors[name] && 'input-error'}`}
+                                style={{
+                                    minHeight: '80px',
+                                    resize: 'none',
+                                }}
+                                {...props}
+                                {...controlledField}
+                            />}
+                        {errors[name] && errors[name]?.message && <li style={{
+                            color: 'red',
+                            fontSize: '14px',
+                        }}>{String(errors[name]?.message)}</li>}
+                    </div>)
+            }}
+        />
+    )
 }
 
 export default InputField
