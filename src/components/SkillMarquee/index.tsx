@@ -8,10 +8,8 @@ import icTailwind from "@/assets/icons/skill/icTailwind.png"
 import icPts from "@/assets/icons/skill/icPts.png"
 import icAi from "@/assets/icons/skill/icAI.png"
 import icMongoDb from "@/assets/icons/skill/icMongoDB.svg"
-import Title from "../common/Title";
 import { Box } from "@mantine/core";
-import { useContext } from "react";
-import { ScrollContext } from "@/contexts/ScrollContext";
+import ScrollFadeUp from "../shared/scroll-fade-up";
 
 const SKILL_LIST = [
     icReact,
@@ -25,32 +23,27 @@ const SKILL_LIST = [
 ]
 
 function SkillMarquee() {
-    const { targetRef, targetId } = useContext(ScrollContext);
-
     return (
-        <Box
-            // id="skill-marquee"
-            // ref={targetId === 'skill-marquee' ? targetRef : null}
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '32px',
-                marginTop: '32px',
-                paddingBottom: '32px',
-            }}>
-            {/* <Title text='SKILL & EXPERIENCE' /> */}
+        <ScrollFadeUp repeat>
+            <Box
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '32px',
+                    marginTop: '32px',
+                    paddingBottom: '32px',
+                }}>
+                <Marquee
+                    pauseOnHover
+                    autoFill
+                    gradient
+                >
+                    {SKILL_LIST.map((item, index) => (
+                        <SkillCard key={index} logo={item} />
+                    ))}
+                </Marquee>
 
-            <Marquee
-                pauseOnHover
-                autoFill
-                gradient
-            >
-                {SKILL_LIST.map((item, index) => (
-                    <SkillCard key={index} logo={item} />
-                ))}
-            </Marquee>
-
-            {/* <Box
+                {/* <Box
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -67,7 +60,8 @@ function SkillMarquee() {
                 <Box>Tools: Git, VSCode, Figma, Sourcetree, Jira Software, Postman, Docker, Adobe Photoshop,
                     Adobe Illustrator</Box>
             </Box> */}
-        </Box>)
+            </Box>
+        </ScrollFadeUp>)
 }
 
 export default SkillMarquee

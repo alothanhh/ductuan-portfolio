@@ -20,7 +20,9 @@ const ScrollFadeUp = ({ children, repeat }: { children: ReactNode; repeat?: bool
         duration: 0.5,
         ease: 'easeInOut',
       }}
-      className='w-full'
+      style={{
+        width: '100%'
+      }}
     >
       {children}
     </motion.div>
