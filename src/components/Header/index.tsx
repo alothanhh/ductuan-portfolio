@@ -14,7 +14,7 @@ function Header() {
     const [opened, { toggle, close }] = useDisclosure();
     const pathName = usePathname()
 
-    const isProjectsPage = useMemo(() => pathName === "/", [pathName])
+    const isRootPage = useMemo(() => pathName === "/", [pathName])
     return (
         <>
             <Portal>
@@ -58,7 +58,7 @@ function Header() {
                         gap={{ base: 'sm', sm: 'lg' }}
                         justify={{ sm: 'center' }}
                         align={{ sm: 'center' }}
-                        display={isProjectsPage ? 'none' : 'flex'}
+                        display={isRootPage ? 'flex' : 'none'}
                     >
                         {HEADER_BUTTONS.map((button, index) => (
                             <HeaderSection button={button} key={index} onClose={close} />
@@ -67,7 +67,7 @@ function Header() {
                     <Burger
                         hiddenFrom="md"
                         color='white'
-                        display={isProjectsPage ? 'none' : 'flex'}
+                        display={isRootPage ? 'flex' : 'none'}
                         opened={opened}
                         onClick={toggle}
                         aria-label="Toggle navigation"
