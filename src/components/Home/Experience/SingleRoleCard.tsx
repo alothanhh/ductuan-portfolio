@@ -1,5 +1,5 @@
 import { Flex, Text } from "@mantine/core"
-import { SingleRoleExperienceProps } from "../constants/experience.constant"
+import { SingleRoleExperienceProps } from "../../constants/experience.constant"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 

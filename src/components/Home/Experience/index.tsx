@@ -2,8 +2,8 @@ import { ScrollContext } from "@/contexts/ScrollContext";
 import useWindowSize from "@/hooks/use-window-size";
 import { Box, Flex, Text } from "@mantine/core";
 import { useContext } from "react";
-import { ATOM, XELEX } from "../constants/experience.constant";
-import Title from "../common/Title";
+import { ATOM, XELEX } from "../../constants/experience.constant";
+import Title from "../../common/Title";
 import SingleRoleCard from "./SingleRoleCard";
 import MultiRoleCard from "./MultiRoleCard";
 

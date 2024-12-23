@@ -1,6 +1,6 @@
 'use client'
 import { Box, Button, Flex } from "@mantine/core"
-import InputField from "../common/InputField"
+import InputField from "../../common/InputField"
 import classes from '@/styles/Button.module.css'
 import { LegacyRef, RefObject, useRef } from "react";
 import emailjs from '@emailjs/browser';

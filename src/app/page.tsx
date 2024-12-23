@@ -1,10 +1,10 @@
 'use client'
-import Contact from "@/components/Contact";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
+import Contact from "@/components/Home/Contact";
+import Education from "@/components/Home/Education";
+import Experience from "@/components/Home/Experience";
 import Header from "@/components/Header";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
+import About from "@/components/Home/About";
+import Projects from "@/components/Home/Projects";
 import SkillMarquee from "@/components/SkillMarquee";
 import { ScrollContext } from "@/contexts/ScrollContext";
 import { useContext } from "react";

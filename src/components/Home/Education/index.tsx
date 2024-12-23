@@ -1,10 +1,10 @@
 import { Flex, List, Text } from "@mantine/core"
-import { SingleRoleExperienceProps } from "../constants/experience.constant"
+import { SingleRoleExperienceProps } from "../../constants/experience.constant"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 import { useContext } from "react"
 import { ScrollContext } from "@/contexts/ScrollContext"
-import Title from "../common/Title"
+import Title from "../../common/Title"
 import Link from "next/link"
 import { IconAward, IconBriefcase, IconCertificate, IconCheck } from "@tabler/icons-react"
 

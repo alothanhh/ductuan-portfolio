@@ -1,5 +1,5 @@
 import { Box, Text } from "@mantine/core"
-import { ProjectCardProps } from "../constants/project.constant";
+import { ProjectCardProps } from "../../constants/project.constant"
 import { useHover } from "@mantine/hooks";
 import useWindowSize from "@/hooks/use-window-size";
 import Image from "next/image";
@@ -12,9 +12,9 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
         <Box
             ref={ref}
             style={{
-                height: '100%',
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: isMobile ? 'column' : 'row',
+                scale: hovered ? 1.02 : 1,
                 cursor: 'pointer',
                 padding: '12px',
                 gap: '20px',
@@ -66,6 +66,7 @@ const ProjectCard = ({ project, opacity }: { opacity: string, project: ProjectCa
                     {project.description}
                 </Text>
             </Box>
+
         </Box>
     )
 }

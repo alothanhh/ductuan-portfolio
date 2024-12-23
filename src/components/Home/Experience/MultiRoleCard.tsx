@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Timeline, ThemeIcon } from "@mantine/core"
-import { MultiRoleExperienceProps } from "../constants/experience.constant"
+import { MultiRoleExperienceProps } from "../../constants/experience.constant"
 import Image from "next/image"
 import useWindowSize from "@/hooks/use-window-size"
 

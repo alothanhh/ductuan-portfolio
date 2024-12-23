@@ -1,10 +1,10 @@
 'use client'
 import { Box } from "@mantine/core"
-import Title from "../common/Title"
+import Title from "../../common/Title"
 import ContactInfo from "./ContactInfo"
 import ContactForm from "./ContactForm"
 import useWindowSize from "@/hooks/use-window-size"
-import ScrollFadeUp from "../shared/scroll-fade-up"
+import ScrollFadeUp from "../../shared/scroll-fade-up"
 import { ScrollContext } from "@/contexts/ScrollContext"
 import { useContext } from "react"
 
