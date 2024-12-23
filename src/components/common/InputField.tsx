@@ -5,7 +5,6 @@ interface InputProps<T extends FieldValues> extends InputHTMLAttributes<HTMLInpu
     label: string,
     name: Path<T>
     control: Control<T>
-    reset?: (name: Path<T>, options?: Record<string, boolean | any>) => void
     multiline?: boolean
 }
 

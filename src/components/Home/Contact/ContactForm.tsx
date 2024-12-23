@@ -1,13 +1,12 @@
 'use client'
-import { Box, Button, Flex } from "@mantine/core"
+import { Button } from "@mantine/core"
 import InputField from "../../common/InputField"
 import classes from '@/styles/Button.module.css'
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { toastError, toastSuccess } from "@/providers/toast.provider";
 import * as yup from 'yup';
-import { desc, form } from "framer-motion/client";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup'
 
 const schema = yup.object({
@@ -49,8 +48,6 @@ function ContactForm() {
                 );
         }
     }
-
-    console.log(isLoading)
 
     return <form
         style={{
