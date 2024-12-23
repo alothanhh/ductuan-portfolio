@@ -1,38 +1,27 @@
 'use client'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import { Box, Portal, rem, Text, Grid, Flex, Button } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
-import { useHover } from '@mantine/hooks';
 import { useDisclosure } from '@mantine/hooks';
 import { Burger, Drawer } from '@mantine/core';
-import { useButtonStore } from '../../contexts/ActiveButtonStore';
 import Link from 'next/link'
-import { ScrollContext } from '@/contexts/ScrollContext';
 import HeaderSection from './Header-Section';
+import { usePathname } from 'next/navigation';
+import { HEADER_BUTTONS } from '../constants/header.constant';
 
 function Header() {
-
     const pinned = useHeadroom({ fixedAt: 120 });
     const [opened, { toggle, close }] = useDisclosure();
+    const pathName = usePathname()
 
-    // Danh sách các nút Button và nội dung tương ứng
-    const buttons = [
-        { label: 'ABOUT', id: 'about' },
-        { label: 'EXPERIENCE', id: 'experience' },
-        { label: 'PROJECTS', id: 'projects' },
-        { label: 'EDUCATION', id: 'education' },
-        { label: 'CONTACT', id: 'contact' }
-    ];
-
+    const isProjectsPage = useMemo(() => pathName === "/", [pathName])
     return (
         <>
             <Portal>
                 <Box
                     style={{
                         position: 'fixed',
-                        top: 0,
-                        left: 0,
-                        right: 0,
+                        inset: 0,
                         padding: 'var(--mantine-spacing-xs)',
                         height: rem(70),
                         zIndex: 10,
@@ -46,35 +35,43 @@ function Header() {
                         paddingRight: '3%'
                     }}
                 >
-                    <Box style={{ display: 'flex' }}>
-                        <div style={{
-                            backgroundImage: 'var(--primary-color)',
-                            width: '7px',
-                        }} />
+                    <Link href="/" style={{ textDecoration: 'none' }}>
+                        <Box style={{ display: 'flex' }}>
+                            <div style={{
+                                backgroundImage: 'var(--primary-color)',
+                                width: '7px',
+                            }} />
 
-                        <Text style={{
-                            color: 'white',
-                            fontWeight: 'bold',
-                            fontSize: '2em',
-                            paddingLeft: '5px',
-                        }}>
-                            Portfolio.
-                        </Text>
-                    </Box>
+                            <Text style={{
+                                color: 'white',
+                                fontWeight: 'bold',
+                                fontSize: '2em',
+                                paddingLeft: '5px',
+                            }}>
+                                Portfolio.
+                            </Text>
+                        </Box>
+                    </Link>
                     <Flex
                         visibleFrom="md"
                         direction={{ sm: 'row' }}
                         gap={{ base: 'sm', sm: 'lg' }}
                         justify={{ sm: 'center' }}
                         align={{ sm: 'center' }}
-                        style={{
-                        }}
+                        display={isProjectsPage ? 'none' : 'flex'}
                     >
-                        {buttons.map((button, index) => (
+                        {HEADER_BUTTONS.map((button, index) => (
                             <HeaderSection button={button} key={index} onClose={close} />
                         ))}
                     </Flex>
-                    <Burger hiddenFrom="md" color='white' opened={opened} onClick={toggle} aria-label="Toggle navigation" />
+                    <Burger
+                        hiddenFrom="md"
+                        color='white'
+                        display={isProjectsPage ? 'none' : 'flex'}
+                        opened={opened}
+                        onClick={toggle}
+                        aria-label="Toggle navigation"
+                    />
                 </Box>
             </Portal >
             <Drawer padding='0' opened={opened} onClose={close} size="xs" position="left" withCloseButton={false} style={{ zIndex: 1 }}>
@@ -87,7 +84,7 @@ function Header() {
                         height: '100vh',
                     }}
                 >
-                    {buttons.map((button, index) => (
+                    {HEADER_BUTTONS.map((button, index) => (
                         <HeaderSection button={button} key={index} onClose={close} />
                     ))}
                 </Flex>

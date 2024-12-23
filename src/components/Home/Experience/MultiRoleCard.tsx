@@ -25,7 +25,7 @@ const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps })
 
                 <Timeline active={1} bulletSize={16} lineWidth={2} color='rgb(26, 247, 169)' pt='lg'>
                     {
-                        experience.roles.map((role, index) => (
+                        experience.roles.map((role) => (
                             <Timeline.Item key={role.title} fz='lg' title={role.title} bullet={<ThemeIcon
                                 size={16}
                                 variant="gradient"
@@ -35,7 +35,7 @@ const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps })
                             </ThemeIcon>}>
                                 <Text size='md' c='gray'>{role.date}</Text>
                                 <Flex direction='column' gap={4}>
-                                    {role.description.map((desc) => (
+                                    {role.description.map((desc, index) => (
                                         <Text size='md' key={index}>{desc}</Text>
                                     ))}
                                 </Flex>
