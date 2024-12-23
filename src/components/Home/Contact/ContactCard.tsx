@@ -3,6 +3,7 @@ import { Flex, Text } from "@mantine/core"
 import Image from "next/image"
 import Link from "next/link"
 import { FC, SVGProps, useMemo, useState } from "react"
+import classes from '@/app/styles.module.css'
 
 type Props = {
     logo: FC<SVGProps<SVGElement>>
@@ -58,11 +59,12 @@ function ContactCard({ logo, title, description }: Props) {
                         fontSize: '14px',
                         lineHeight: '20px',
                         marginBottom: '8px',
-                    }}>{description}</Text> :
+                    }}
+                    >{description}</Text> :
                     <Flex gap='4px'>
-                        <Link href='https://www.linkedin.com/in/thanh-dangquang/' target="_blank" style={{ textDecoration: 'none' }}>Linkedin</Link>
+                        <Link href='https://www.linkedin.com/in/thanh-dangquang/' target="_blank" className="gradient-text">Linkedin</Link>
                         <Text> | </Text>
-                        <Link href='https://t.me/aidendang' target="_blank" style={{ textDecoration: 'none' }}>Telegram</Link>
+                        <Link href='https://t.me/aidendang' target="_blank" className="gradient-text">Telegram</Link>
                     </Flex>
                 }
 

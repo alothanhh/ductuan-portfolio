@@ -3,17 +3,28 @@ import React from 'react'
 
 const CvPreview = () => {
     return (
-        <div style={{
-            zIndex: 999,
-            position: 'fixed',
-            inset: 0,
-        }}>
-            <embed
+        <div
+            className='no-scrollbar'
+            style={{
+                zIndex: 999,
+                position: 'fixed',
+                inset: 0,
+            }}>
+            {/* <iframe
                 src="/cv/CV_Thanh_Dang.pdf"
-                width="100%"
-                height="100%"
-                type="application/pdf"
-            />
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                }}
+            ></iframe> */}
+
+            <iframe
+                src="https://drive.google.com/viewerng/viewer?embedded=true&url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Ddownload%26id%3D1E09T0hRZnQpsegDZpHf5KoPiu2dAdh4j"
+                frameBorder="0"
+                style={{ width: '100%', height: '100vh' }}
+            ></iframe>
+
         </div>
     )
 }
