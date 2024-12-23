@@ -1,4 +1,3 @@
-import { Mulish } from "next/font/google"
 import React, { InputHTMLAttributes } from "react"
 import { Control, Controller, FieldValues, Path, useFormState, useWatch } from "react-hook-form"
 
@@ -6,6 +5,7 @@ interface InputProps<T extends FieldValues> extends InputHTMLAttributes<HTMLInpu
     label: string,
     name: Path<T>
     control: Control<T>
+    reset?: (name: Path<T>, options?: Record<string, boolean | any>) => void
     multiline?: boolean
 }
 

@@ -2,12 +2,12 @@
 import { Box, Button, Flex } from "@mantine/core"
 import InputField from "../../common/InputField"
 import classes from '@/styles/Button.module.css'
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { toastError, toastSuccess } from "@/providers/toast.provider";
 import * as yup from 'yup';
 import { desc, form } from "framer-motion/client";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup'
 
 const schema = yup.object({
@@ -18,13 +18,14 @@ const schema = yup.object({
 })
 
 function ContactForm() {
+    const [isLoading, setIsLoading] = useState<boolean>(false)
     const formRef = useRef<HTMLFormElement>(null);
-    const { control, handleSubmit } = useForm(
+    const { control, reset, handleSubmit } = useForm(
         { resolver: yupResolver(schema) }
     )
 
     const onSubmit = (data: yup.Asserts<typeof schema>) => {
-        console.log(formRef.current)
+        setIsLoading(true)
         if (formRef.current) {
             emailjs
                 .sendForm('service_3582ulh', 'template_4ojb97w', formRef.current, {
@@ -33,13 +34,23 @@ function ContactForm() {
                 .then(
                     () => {
                         toastSuccess('Message sent successfully!')
+                        reset({
+                            email: '',
+                            name: '',
+                            subject: '',
+                            description: '',
+                        })
+                        setIsLoading(false)
                     },
                     (error) => {
                         toastError('Service is unavailable')
+                        setIsLoading(false)
                     },
                 );
         }
     }
+
+    console.log(isLoading)
 
     return <form
         style={{
@@ -66,8 +77,9 @@ function ContactForm() {
             className={classes['button-gradient']}
             w='100%'
             type="submit"
+            disabled={isLoading}
         >
-            Send Message
+            {isLoading ? 'Sending...' : 'Send Message'}
         </Button>
     </form>
 }

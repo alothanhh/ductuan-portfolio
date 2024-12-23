@@ -1,6 +1,7 @@
 'use client'
-import { Text } from "@mantine/core"
+import { Flex, Text } from "@mantine/core"
 import Image from "next/image"
+import Link from "next/link"
 import { FC, SVGProps, useMemo, useState } from "react"
 
 type Props = {
@@ -51,11 +52,21 @@ function ContactCard({ logo, title, description }: Props) {
                     lineHeight: '24px',
                     fontWeight: 700,
                 }}>{title}</Text>
-                <Text style={{
-                    fontSize: '14px',
-                    lineHeight: '20px',
-                    marginBottom: '8px',
-                }}>{description}</Text>
+
+                {description !== 'SOCIAL_LIST' ?
+                    <Text style={{
+                        fontSize: '14px',
+                        lineHeight: '20px',
+                        marginBottom: '8px',
+                    }}>{description}</Text> :
+                    <Flex gap='4px'>
+                        <Link href='https://www.linkedin.com/in/thanh-dangquang/' target="_blank" style={{ textDecoration: 'none' }}>Linkedin</Link>
+                        <Text> | </Text>
+                        <Link href='https://t.me/aidendang' target="_blank" style={{ textDecoration: 'none' }}>Telegram</Link>
+                    </Flex>
+                }
+
+
             </div>
         </div>
     </>
