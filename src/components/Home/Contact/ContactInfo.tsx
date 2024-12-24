@@ -2,7 +2,7 @@ import { Box, Text } from '@mantine/core'
 
 import useWindowSize from '@/hooks/use-window-size'
 
-import { CONTACT_CARD_INFO } from '../../constants/contact.constant'
+import { CONTACT_CARD_INFO } from '../../../constants/contact.constant'
 
 import ContactCard from './ContactCard'
 

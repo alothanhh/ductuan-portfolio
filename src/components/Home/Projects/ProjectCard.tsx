@@ -3,9 +3,8 @@ import Image from 'next/image'
 import { Box, Text } from '@mantine/core'
 import { useHover } from '@mantine/hooks'
 
+import { ProjectCardProps } from '@/constants/project.constant'
 import useWindowSize from '@/hooks/use-window-size'
-
-import { ProjectCardProps } from '../../constants/project.constant'
 
 const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectCardProps }) => {
   const { isMobile } = useWindowSize()

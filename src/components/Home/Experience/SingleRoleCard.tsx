@@ -4,7 +4,7 @@ import { Flex, Text } from '@mantine/core'
 
 import useWindowSize from '@/hooks/use-window-size'
 
-import { SingleRoleExperienceProps } from '../../constants/experience.constant'
+import { SingleRoleExperienceProps } from '../../../constants/experience.constant'
 
 const SingleRoleCard = ({ experience }: { experience: SingleRoleExperienceProps }) => {
   const { isMobile } = useWindowSize()

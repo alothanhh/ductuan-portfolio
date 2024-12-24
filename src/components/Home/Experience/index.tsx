@@ -6,7 +6,7 @@ import { ScrollContext } from '@/contexts/ScrollContext'
 import useWindowSize from '@/hooks/use-window-size'
 
 import Title from '../../common/Title'
-import { ATOM, XELEX } from '../../constants/experience.constant'
+import { ATOM, XELEX } from '../../../constants/experience.constant'
 
 import MultiRoleCard from './MultiRoleCard'
 import SingleRoleCard from './SingleRoleCard'

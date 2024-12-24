@@ -5,9 +5,8 @@ import { useState } from 'react'
 import { Box, Button } from '@mantine/core'
 import { IconArrowRight } from '@tabler/icons-react'
 
+import { PROJECTS_LIST } from '@/constants/project.constant'
 import classes from '@/styles/Button.module.css'
-
-import { PROJECTS_LIST } from '../../constants/project.constant'
 
 import ProjectCard from './ProjectCard'
 

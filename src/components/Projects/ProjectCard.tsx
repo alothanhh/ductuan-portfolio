@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import { Box, Text } from '@mantine/core'
+import { Badge, Box, Text } from '@mantine/core'
 
 import useWindowSize from '@/hooks/use-window-size'
 
-import { ProjectCardProps } from '../constants/project.constant'
+import { ProjectDetailProps } from '../../constants/project.constant'
 
-const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectCardProps }) => {
+const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectDetailProps }) => {
   const { isMobile } = useWindowSize()
 
   return (
@@ -46,14 +46,19 @@ const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectCa
           width: '100%',
         }}
       >
-        <Text
-          style={{
-            fontSize: '24px',
-            fontWeight: '600',
-          }}
-        >
-          {project.title}
-        </Text>
+        <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Text
+            style={{
+              fontSize: '24px',
+              fontWeight: '600',
+            }}
+          >
+            {project.title}
+          </Text>
+          <Badge color={project.color} variant='outline' size='sm'>
+            {project.type}
+          </Badge>
+        </Box>
         <Box style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           {project.techList.map((tech) => {
             return (
