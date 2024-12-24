@@ -1,15 +1,18 @@
-import Marquee from "react-fast-marquee";
-import SkillCard from "./SkillCard";
-import icReact from "@/assets/icons/skill/icReact.png"
-import icGitlab from "@/assets/icons/skill/icGitlab.svg"
-import icNext from "@/assets/icons/skill/icNext.svg"
-import icAngular from "@/assets/icons/skill/icAngular.png"
-import icTailwind from "@/assets/icons/skill/icTailwind.png"
-import icPts from "@/assets/icons/skill/icPts.png"
-import icAi from "@/assets/icons/skill/icAI.png"
-import icMongoDb from "@/assets/icons/skill/icMongoDB.svg"
 import { Box } from "@mantine/core";
+import Marquee from "react-fast-marquee";
+
+import icAi from "@/assets/icons/skill/icAI.png";
+import icAngular from "@/assets/icons/skill/icAngular.png";
+import icGitlab from "@/assets/icons/skill/icGitlab.svg";
+import icMongoDb from "@/assets/icons/skill/icMongoDB.svg";
+import icNext from "@/assets/icons/skill/icNext.svg";
+import icPts from "@/assets/icons/skill/icPts.png";
+import icReact from "@/assets/icons/skill/icReact.png";
+import icTailwind from "@/assets/icons/skill/icTailwind.png";
+
 import ScrollFadeUp from "../shared/scroll-fade-up";
+
+import SkillCard from "./SkillCard";
 
 const SKILL_LIST = [
     icReact,
@@ -20,24 +23,21 @@ const SKILL_LIST = [
     icPts,
     icAi,
     icMongoDb,
-]
+];
 
 function SkillMarquee() {
     return (
         <ScrollFadeUp repeat>
             <Box
                 style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '32px',
-                    marginTop: '32px',
-                    paddingBottom: '32px',
-                }}>
-                <Marquee
-                    pauseOnHover
-                    autoFill
-                    gradient
-                >
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "32px",
+                    marginTop: "32px",
+                    paddingBottom: "32px",
+                }}
+            >
+                <Marquee pauseOnHover autoFill gradient>
                     {SKILL_LIST.map((item, index) => (
                         <SkillCard key={index} logo={item} />
                     ))}
@@ -61,7 +61,8 @@ function SkillMarquee() {
                     Adobe Illustrator</Box>
             </Box> */}
             </Box>
-        </ScrollFadeUp>)
+        </ScrollFadeUp>
+    );
 }
 
-export default SkillMarquee
+export default SkillMarquee;

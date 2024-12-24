@@ -1,5 +1,5 @@
-import icXelex from "@/assets/icons/company-logo/Xelex.jpg";
 import icAtom from "@/assets/icons/company-logo/Atom.png";
+import icXelex from "@/assets/icons/company-logo/Xelex.jpg";
 
 export const XELEX = {
   title: "Software Engineer Intern",

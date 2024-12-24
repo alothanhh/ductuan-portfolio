@@ -1,51 +1,81 @@
-import { Box, Flex, Text, Timeline, ThemeIcon } from "@mantine/core"
-import { MultiRoleExperienceProps } from "../../constants/experience.constant"
-import Image from "next/image"
-import useWindowSize from "@/hooks/use-window-size"
+import Image from "next/image";
 
-const MultiRoleCard = ({ experience }: { experience: MultiRoleExperienceProps }) => {
-    const { isMobile } = useWindowSize()
+import { Flex, Text, ThemeIcon, Timeline } from "@mantine/core";
 
-    return (
-        <Flex gap='md' w='100%'
-            direction={isMobile ? 'column' : 'row'}
-            style={{
-                padding: '20px',
-                background: 'white',
-                borderRadius: '8px',
-                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1)',
-            }}
+import useWindowSize from "@/hooks/use-window-size";
+
+import { MultiRoleExperienceProps } from "../../constants/experience.constant";
+
+const MultiRoleCard = ({
+  experience,
+}: {
+  experience: MultiRoleExperienceProps;
+}) => {
+  const { isMobile } = useWindowSize();
+
+  return (
+    <Flex
+      gap="md"
+      w="100%"
+      direction={isMobile ? "column" : "row"}
+      style={{
+        padding: "20px",
+        background: "white",
+        borderRadius: "8px",
+        boxShadow:
+          "0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1)",
+      }}
+    >
+      <Image src={experience.logo} alt="logo" width={64} />
+
+      <Flex direction="column" w="100%">
+        <Text size="xl" fw={600}>
+          {experience.company_name}
+        </Text>
+        <Text size="md" c="gray" visibleFrom="md">
+          {experience.location}
+        </Text>
+
+        <Timeline
+          active={1}
+          bulletSize={16}
+          lineWidth={2}
+          color="rgb(26, 247, 169)"
+          pt="lg"
         >
-            <Image src={experience.logo} alt="logo" width={64} />
+          {experience.roles.map((role) => (
+            <Timeline.Item
+              key={role.title}
+              fz="lg"
+              title={role.title}
+              bullet={
+                <ThemeIcon
+                  size={16}
+                  variant="gradient"
+                  gradient={{
+                    from: "rgb(26, 247, 169)",
+                    to: "rgb(8, 205, 218)",
+                  }}
+                  radius="xl"
+                ></ThemeIcon>
+              }
+            >
+              <Text size="md" c="gray">
+                {role.date}
+              </Text>
+              <Flex direction="column" gap={4}>
+                {role.description.map((desc, index) => (
+                  <Text size="md" key={index}>
+                    {desc}
+                  </Text>
+                ))}
+              </Flex>
+            </Timeline.Item>
+          ))}
+        </Timeline>
+      </Flex>
+    </Flex>
+  );
+};
 
-            <Flex direction='column' w='100%'>
-
-                <Text size="xl" fw={600}>{experience.company_name}</Text>
-                <Text size='md' c='gray' visibleFrom="md">{experience.location}</Text>
-
-                <Timeline active={1} bulletSize={16} lineWidth={2} color='rgb(26, 247, 169)' pt='lg'>
-                    {
-                        experience.roles.map((role) => (
-                            <Timeline.Item key={role.title} fz='lg' title={role.title} bullet={<ThemeIcon
-                                size={16}
-                                variant="gradient"
-                                gradient={{ from: 'rgb(26, 247, 169)', to: 'rgb(8, 205, 218)' }}
-                                radius="xl"
-                            >
-                            </ThemeIcon>}>
-                                <Text size='md' c='gray'>{role.date}</Text>
-                                <Flex direction='column' gap={4}>
-                                    {role.description.map((desc, index) => (
-                                        <Text size='md' key={index}>{desc}</Text>
-                                    ))}
-                                </Flex>
-                            </Timeline.Item>
-                        ))
-                    }
-                </Timeline>
-            </Flex>
-        </Flex >
-    )
-}
-
-export default MultiRoleCard
+export default MultiRoleCard;

@@ -1,8 +1,7 @@
-import imgProject1 from "@/assets/images/imgAvatar.jpg";
-import imgBVBank from "@/assets/images/projects/imgBVBank.jpg";
 import imgAtomHub from "@/assets/images/projects/imgAtomHub.jpg";
-import imgQuizzes from "@/assets/images/projects/imgQuizzes.png";
+import imgBVBank from "@/assets/images/projects/imgBVBank.jpg";
 import imgForms from "@/assets/images/projects/imgForms.jpg";
+import imgQuizzes from "@/assets/images/projects/imgQuizzes.png";
 
 export const PROJECTS_LIST = [
   {
