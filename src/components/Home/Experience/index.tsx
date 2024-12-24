@@ -5,8 +5,8 @@ import ScrollFadeUp from '@/components/shared/scroll-fade-up'
 import { ScrollContext } from '@/contexts/ScrollContext'
 import useWindowSize from '@/hooks/use-window-size'
 
-import Title from '../../common/Title'
 import { ATOM, XELEX } from '../../../constants/experience.constant'
+import Title from '../../common/Title'
 
 import MultiRoleCard from './MultiRoleCard'
 import SingleRoleCard from './SingleRoleCard'
