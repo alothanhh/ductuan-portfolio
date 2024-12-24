@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
+'use client'
+import React from 'react'
 
 const CvPreview = () => {
   return (
     <div
-      className="no-scrollbar"
+      className='no-scrollbar'
       style={{
         zIndex: 999,
-        position: "fixed",
+        position: 'fixed',
         inset: 0,
       }}
     >
@@ -21,12 +21,12 @@ const CvPreview = () => {
             ></iframe> */}
 
       <iframe
-        src="https://drive.google.com/viewerng/viewer?embedded=true&url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Ddownload%26id%3D1E09T0hRZnQpsegDZpHf5KoPiu2dAdh4j"
-        frameBorder="0"
-        style={{ width: "100%", height: "100vh" }}
+        src='https://drive.google.com/viewerng/viewer?embedded=true&url=https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Ddownload%26id%3D1E09T0hRZnQpsegDZpHf5KoPiu2dAdh4j'
+        frameBorder='0'
+        style={{ width: '100%', height: '100vh' }}
       ></iframe>
     </div>
-  );
-};
+  )
+}
 
-export default CvPreview;
+export default CvPreview

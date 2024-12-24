@@ -1,13 +1,7 @@
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 
-const ScrollFadeUp = ({
-  children,
-  repeat,
-}: {
-  children: ReactNode;
-  repeat?: boolean;
-}) => {
+const ScrollFadeUp = ({ children, repeat }: { children: ReactNode; repeat?: boolean }) => {
   return (
     <motion.div
       initial={{
@@ -20,19 +14,19 @@ const ScrollFadeUp = ({
       }}
       viewport={{
         once: !repeat,
-        margin: "150px",
+        margin: '150px',
       }}
       transition={{
         duration: 0.5,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       }}
       style={{
-        width: "100%",
+        width: '100%',
       }}
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}
 
-export default ScrollFadeUp;
+export default ScrollFadeUp

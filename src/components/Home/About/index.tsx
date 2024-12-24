@@ -1,69 +1,69 @@
-"use client";
+'use client'
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { useContext } from "react";
-import { Box, Button, Flex, Text } from "@mantine/core";
+import { useContext } from 'react'
+import { Box, Button, Flex, Text } from '@mantine/core'
 
-import icEmail from "@/assets/icons/icEmail.svg";
-import icPhone from "@/assets/icons/icPhone.svg";
-import icPlaceMarker from "@/assets/icons/icPlaceMarker.svg";
-import imgAvatarFocus from "@/assets/images/imgAvatar_2.jpg";
-import { ScrollContext } from "@/contexts/ScrollContext";
-import useWindowSize from "@/hooks/use-window-size";
-import classes from "@/styles/Button.module.css";
+import icEmail from '@/assets/icons/icEmail.svg'
+import icPhone from '@/assets/icons/icPhone.svg'
+import icPlaceMarker from '@/assets/icons/icPlaceMarker.svg'
+import imgAvatarFocus from '@/assets/images/imgAvatar_2.jpg'
+import { ScrollContext } from '@/contexts/ScrollContext'
+import useWindowSize from '@/hooks/use-window-size'
+import classes from '@/styles/Button.module.css'
 
-import ScrollFadeUp from "../../shared/scroll-fade-up";
+import ScrollFadeUp from '../../shared/scroll-fade-up'
 
 function About() {
-  const { isMobile } = useWindowSize();
-  const { targetRef, targetId } = useContext(ScrollContext);
+  const { isMobile } = useWindowSize()
+  const { targetRef, targetId } = useContext(ScrollContext)
 
   const handleDownload = () => {
-    const pdfUrl = "/cv/CV_Thanh_Dang.pdf";
+    const pdfUrl = '/cv/CV_Thanh_Dang.pdf'
 
-    const fileName = "CV_Thanh_Dang.pdf";
+    const fileName = 'CV_Thanh_Dang.pdf'
 
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = fileName;
+    const link = document.createElement('a')
+    link.href = pdfUrl
+    link.download = fileName
 
-    document.body.appendChild(link);
-    link.click();
+    document.body.appendChild(link)
+    link.click()
 
-    document.body.removeChild(link);
-  };
+    document.body.removeChild(link)
+  }
 
   return (
     <ScrollFadeUp repeat>
       <Box
-        id="about"
-        ref={targetId === "about" ? targetRef : null}
+        id='about'
+        ref={targetId === 'about' ? targetRef : null}
         style={{
-          backgroundColor: "#F7F7F7",
-          padding: isMobile ? "32px" : "64px 128px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "32px",
-          width: "100%",
+          backgroundColor: '#F7F7F7',
+          padding: isMobile ? '32px' : '64px 128px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '32px',
+          width: '100%',
         }}
       >
         <Box
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "8px",
-            width: "100%",
-            maxWidth: "700px",
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            width: '100%',
+            maxWidth: '700px',
           }}
         >
           <Text
             style={{
-              fontSize: "32px",
+              fontSize: '32px',
               fontWeight: 700,
-              lineHeight: "48px",
+              lineHeight: '48px',
             }}
           >
             Hi There,
@@ -71,18 +71,18 @@ function About() {
 
           <Text
             style={{
-              fontSize: "32px",
+              fontSize: '32px',
               fontWeight: 700,
-              lineHeight: "48px",
-              textWrap: "nowrap",
+              lineHeight: '48px',
+              textWrap: 'nowrap',
             }}
           >
-            I'm{" "}
+            I'm{' '}
             <span
               style={{
-                backgroundImage: "var(--primary-color)",
-                color: "transparent",
-                backgroundClip: "text",
+                backgroundImage: 'var(--primary-color)',
+                color: 'transparent',
+                backgroundClip: 'text',
               }}
             >
               Aiden Dang
@@ -96,67 +96,61 @@ function About() {
             height={150}
             quality={100}
             style={{
-              objectFit: "cover",
-              minWidth: "150px",
-              borderRadius: "100%",
-              display: isMobile ? "block" : "none",
-              margin: "8px 0",
-              alignSelf: "center",
+              objectFit: 'cover',
+              minWidth: '150px',
+              borderRadius: '100%',
+              display: isMobile ? 'block' : 'none',
+              margin: '8px 0',
+              alignSelf: 'center',
             }}
           />
 
           <Text>
-            Dedicated front-end developer skills, merging creativity with
-            technical expertise for visually appealing and user-centric
-            websites.
+            Dedicated front-end developer skills, merging creativity with technical expertise for visually appealing and
+            user-centric websites.
           </Text>
 
           <Box
-            id="contact-and-download-cv"
+            id='contact-and-download-cv'
             style={{
-              display: "flex",
-              flexDirection: "column",
-              marginTop: "8px",
-              gap: "24px",
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '8px',
+              gap: '24px',
             }}
           >
             <Box
               style={{
-                display: "flex",
+                display: 'flex',
               }}
             >
               <div
                 style={{
-                  backgroundImage: "var(--primary-color)",
-                  width: "7px",
+                  backgroundImage: 'var(--primary-color)',
+                  width: '7px',
                 }}
               />
 
               <Box
                 style={{
-                  backgroundColor: "#F7F7F7",
-                  display: "flex",
-                  flexDirection: "column",
-                  paddingLeft: "16px",
+                  backgroundColor: '#F7F7F7',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  paddingLeft: '16px',
                 }}
               >
                 <Box
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
                   }}
                 >
-                  <Image
-                    src={icPlaceMarker}
-                    alt="place-marker"
-                    width={24}
-                    height={24}
-                  />
+                  <Image src={icPlaceMarker} alt='place-marker' width={24} height={24} />
                   <Text
                     style={{
-                      fontSize: "16px",
-                      lineHeight: "32px",
+                      fontSize: '16px',
+                      lineHeight: '32px',
                     }}
                   >
                     Ho Chi Minh City, Viet Nam
@@ -164,16 +158,16 @@ function About() {
                 </Box>
                 <Box
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
                   }}
                 >
-                  <Image src={icPhone} alt="phone" width={24} height={24} />
+                  <Image src={icPhone} alt='phone' width={24} height={24} />
                   <Text
                     style={{
-                      fontSize: "16px",
-                      lineHeight: "32px",
+                      fontSize: '16px',
+                      lineHeight: '32px',
                     }}
                   >
                     0337 268 100
@@ -181,16 +175,16 @@ function About() {
                 </Box>
                 <Box
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
                   }}
                 >
-                  <Image src={icEmail} alt="email" width={24} height={24} />
+                  <Image src={icEmail} alt='email' width={24} height={24} />
                   <Text
                     style={{
-                      fontSize: "16px",
-                      lineHeight: "32px",
+                      fontSize: '16px',
+                      lineHeight: '32px',
                     }}
                   >
                     thanh.dangquang28@gmail.com
@@ -200,21 +194,18 @@ function About() {
             </Box>
 
             <Flex gap={4}>
-              <Link href="/cv-preview" target="_blank">
+              <Link href='/cv-preview' target='_blank'>
                 <Button
-                  variant="outline"
-                  c="rgb(8, 205, 218)"
+                  variant='outline'
+                  c='rgb(8, 205, 218)'
                   style={{
-                    borderColor: "rgb(8, 205, 218)",
+                    borderColor: 'rgb(8, 205, 218)',
                   }}
                 >
                   PREVIEW CV
                 </Button>
               </Link>
-              <Button
-                onClick={handleDownload}
-                className={classes["button-gradient"]}
-              >
+              <Button onClick={handleDownload} className={classes['button-gradient']}>
                 DOWNLOAD CV
               </Button>
             </Flex>
@@ -228,15 +219,15 @@ function About() {
           height={300}
           quality={100}
           style={{
-            objectFit: "cover",
-            minWidth: "300px",
-            borderRadius: "100%",
-            display: isMobile ? "none" : "block",
+            objectFit: 'cover',
+            minWidth: '300px',
+            borderRadius: '100%',
+            display: isMobile ? 'none' : 'block',
           }}
         />
       </Box>
     </ScrollFadeUp>
-  );
+  )
 }
 
-export default About;
+export default About

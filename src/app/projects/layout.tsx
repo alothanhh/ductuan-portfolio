@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from '@/components/Header'
 
 const ProjectsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -6,7 +6,7 @@ const ProjectsLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default ProjectsLayout;
+export default ProjectsLayout
