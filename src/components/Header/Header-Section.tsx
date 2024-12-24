@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { RefObject, useContext } from 'react'
 import { Button } from '@mantine/core'
 import { useHover } from '@mantine/hooks'
 
@@ -27,7 +27,7 @@ const HeaderSection = ({ button, onClose }: HeaderSectionProps) => {
         fontSize: '1em',
         color: hovered ? 'rgb(26, 247, 169)' : 'white',
       }}
-      ref={ref}
+      ref={ref as RefObject<HTMLButtonElement>}
       onClick={() => handleButtonClick(button.id)}
     >
       {button.label}

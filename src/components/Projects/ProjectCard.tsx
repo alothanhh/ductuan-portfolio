@@ -20,7 +20,6 @@ const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectCa
         gap: '20px',
         opacity: opacity,
         transition: 'opacity 0.3s ease-in-out, scale 0.3s ease-in-out',
-        // border: '1px solid #e5e5e5',
         borderRadius: '8px',
         backgroundColor: 'white',
         minHeight: '195px',
