@@ -42,6 +42,12 @@ const ProjectList = () => {
             <ProjectCard project={project} opacity={activeCard === index || activeCard === null ? '1' : '0.5'} />
           </Grid.Col>
         ))}
+        <Grid.Col
+          span={{ base: 12, md: 6 }}
+          style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '500' }}
+        >
+          And more than 5 assignments/projects at university.
+        </Grid.Col>
       </Grid>
       {selectedProject && (
         <ModalDetailProject isOpen={isOpen} onClose={() => setIsOpen(false)} selectedProject={selectedProject} />

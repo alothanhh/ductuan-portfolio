@@ -1,6 +1,9 @@
 import imgAtomHub from '@/assets/images/projects/imgAtomHub.jpg'
 import imgBVBank from '@/assets/images/projects/imgBVBank.jpg'
 import imgForms from '@/assets/images/projects/imgForms.jpg'
+import imgMokApi from '@/assets/images/projects/imgMokApi.png'
+import imgMugiRecipe from '@/assets/images/projects/imgMugiRecipe.png'
+import imgPortfolio from '@/assets/images/projects/imgPortfolio.jpg'
 import imgQuizzes from '@/assets/images/projects/imgQuizzes.png'
 
 export const PROJECTS_LIST = [
@@ -110,14 +113,38 @@ export const PROJECTS_LIST_DETAIL = [
     techList: ['React', 'Typescript', 'Material UI'],
     link: 'https://picsum.photos/id/10/200/200',
   },
+  {
+    title: 'Aiden Portfolio',
+    type: 'PERSONAL PROJECT',
+    color: 'green',
+    description:
+      'Explore my creative journey, skills, and accomplishments! Here, you’ll find highlights of my work, passion projects, and the expertise I bring to every opportunity.',
+    image: imgPortfolio,
+    techList: ['Next.js', 'Typescript', 'Mantine', 'Framer Motion', 'EmailJs'],
+    link: 'https://picsum.photos/id/10/200/200',
+  },
+  {
+    title: 'MugiRecipe (Mobile App)',
+    type: 'UNIVERSITY ASSIGNMENT',
+    color: 'blue',
+    description:
+      "A mobile app that recommends recipes based on photos. It uses the Clarifai API to analyze user's photos and provide tailored recipe suggestions.",
+    image: imgMugiRecipe,
+    techList: ['React Native', 'Expo', 'Clarifai', 'MongoDB', 'NestJs'],
+    link: 'https://picsum.photos/id/10/200/200',
+  },
+  {
+    title: 'MOK APIS',
+    type: 'PROJECT OF ATOM',
+    color: 'red',
+    description:
+      'An internal company project designed to create mock APIs and mock data for testing and development purposes.',
+    image: imgMokApi,
+    techList: ['Next.js', 'Typescript', 'TailwindCSS'],
+    link: 'https://picsum.photos/id/10/200/200',
+  },
 
   // Timeline, Team, Team size, Responsibilities
-
-  // Aiden Portfolio
-  // Mugicook (React Native App)
-  // Monday App (Xelex intership)
-  // MockAPI
-  // 5+ assignments project in university
 ]
 
 export type ProjectCardProps = (typeof PROJECTS_LIST)[number]

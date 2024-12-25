@@ -45,10 +45,13 @@ const ModalWrap = ({ isOpen = false, onClose, children, title, hideIcClose }: Pr
             exit={{ scale: 0.5, opacity: 0 }}
             transition={{ duration: 0.1 }}
             onClick={(e) => e.stopPropagation()}
+            className='no-scrollbar'
             style={{
               position: 'relative',
               width: '92%',
               maxWidth: '900px',
+              maxHeight: '90%',
+              overflowY: 'scroll',
               borderRadius: '10px', // Approximates Tailwind's rounded-2xl
               backgroundColor: 'white',
               padding: '16px 24px', // Approximates Tailwind's px-6 py-8
@@ -61,7 +64,7 @@ const ModalWrap = ({ isOpen = false, onClose, children, title, hideIcClose }: Pr
                 onClick={onClose}
                 style={{ position: 'absolute', right: '16px', top: '16px', zIndex: 20 }}
               >
-                <IconX size={24} style={{ opacity: 0.7, transition: 'opacity 0.2s' }} />
+                <IconX size={24} style={{ opacity: 0.7, transition: 'opacity 0.2s' }} color='black' />
               </Button>
             )}
             {title && <div style={{ marginBottom: '16px' }}>{title}</div>} {/* Added margin for spacing */}

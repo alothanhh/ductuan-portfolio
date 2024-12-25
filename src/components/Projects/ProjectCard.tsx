@@ -34,8 +34,8 @@ const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectDe
           maxHeight: '195px',
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center',
+          objectFit: 'contain',
+          objectPosition: 'top',
         }}
       />
       <Box
