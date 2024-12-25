@@ -36,6 +36,8 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
         <Text>Time: July 2023 - Oct 2024</Text>
       </Flex>
 
+      <Text>Team size: 30 | FE Team: 3</Text>
+
       <Divider my={20} />
 
       <Text>{project.description}</Text>
