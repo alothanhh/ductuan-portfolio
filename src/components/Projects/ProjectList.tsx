@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Grid } from '@mantine/core'
 
 import useWindowSize from '@/hooks/use-window-size'
@@ -20,18 +20,6 @@ const ProjectList = () => {
     setSelectedProject(PROJECTS_LIST_DETAIL[index])
     setIsOpen(true)
   }
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      const id = params.get('project_id')
-
-      if (id)
-        setTimeout(() => {
-          handleViewProject(Number(id))
-        }, 500)
-    }
-  }, [])
 
   return (
     <>

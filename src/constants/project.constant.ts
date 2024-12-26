@@ -12,7 +12,7 @@ export const PROJECTS_LIST = [
     description:
       'Explore my creative journey, skills, and accomplishments! Here, you’ll find highlights of my work, passion projects, and the expertise I bring to every opportunity.',
     image: imgPortfolio,
-    techList: ['Next.js', 'Typescript', 'Mantine', 'Framer Motion', 'EmailJs'],
+    techList: ['Next.js', 'Typescript', 'Mantine', 'EmailJs'],
     link: 'https://picsum.photos/id/10/200/200',
   },
   {
