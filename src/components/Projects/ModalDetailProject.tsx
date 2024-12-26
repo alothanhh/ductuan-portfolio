@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { ActionIcon, Box, Divider, Flex, Text, ThemeIcon } from '@mantine/core'
+import { ActionIcon, Box, Divider, Flex, List, Text, ThemeIcon } from '@mantine/core'
 import { IconBrandGithub, IconCalendarDue, IconUsers } from '@tabler/icons-react'
 
 import { ProjectDetailProps } from '@/constants/project.constant'
@@ -65,11 +65,21 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
       <Divider my={20} />
 
       <Text>{project.description}</Text>
+
+      <Divider my={20} />
+
       <Text fw={600}>Main features:</Text>
+
+      <List listStyleType='disc'>
+        {project.mainFeature?.map((feature, index) => <List.Item key={index}>{feature}</List.Item>)}
+      </List>
 
       <Divider my={20} />
 
       <Text fw={600}>Responsibilities:</Text>
+      <List listStyleType='disc'>
+        {project.responsibilities?.map((feature, index) => <List.Item key={index}>{feature}</List.Item>)}
+      </List>
     </ModalWrap>
   )
 }

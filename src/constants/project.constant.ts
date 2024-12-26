@@ -62,6 +62,8 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 1,
     feTeam: 1,
+    mainFeature: ['Showcase of my skills, projects, and accomplishments.', 'Directly contact me via email.'],
+    responsibilities: ['Generate ideas and build whole website.'],
   },
   {
     title: 'Merchant Portal - BVBank',
@@ -86,6 +88,16 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 33,
     feTeam: 3,
+    mainFeature: [
+      'Manage and display payment reports from various types of transactions such as card transactions, QR transactions, etc.',
+      'Create products, orders, and process payments directly on the merchant platform.',
+      'Set up the UI for POS machines and checkout gateway.',
+    ],
+    responsibilities: [
+      'Update the UI and business logic based on design specifications and user requirements.',
+      'Implement new features, such as setting up the UI for POS machines, verifying new payment account.',
+      'Fix bugs and refactor code to enhance application performance.',
+    ],
   },
   {
     title: 'ATOM HUB',
@@ -109,6 +121,14 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 20,
     feTeam: 4,
+    mainFeature: [
+      "Explore about ATOM's product",
+      "Register and test ATOM's products, including Virtual Account Management services, POS services, and more.",
+    ],
+    responsibilities: [
+      'Work closely with the team to implement user interfaces and business logic.',
+      'Collaborate with the Back-end team to integrate APIs.',
+    ],
   },
   {
     title: 'Quizzes on-chain',
@@ -132,6 +152,15 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 6,
     feTeam: 3,
+    mainFeature: [
+      'Login with zkLogin using social platforms such as Google, Twitch, and Facebook.',
+      'Create quizzes and answer quizzes in realtime',
+      'View quiz results on the SUI blockchain.',
+    ],
+    responsibilities: [
+      'Research about zkLogin and SUI blockchain to create account wallet.',
+      'Collaborate with Back-end and Smart Contract developers to integrate the flow accurately.',
+    ],
   },
   {
     title: 'Form Generator System',
@@ -145,6 +174,17 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 3,
     feTeam: 1,
+    mainFeature: [
+      'Create forms in multiple ways: as a datasheet, from your description, or from an image.',
+      'Manage forms with a user-friendly interface.',
+      'Questions in the form can be more specialized in data types and requirements, such as linked data types, tabular data types, etc.',
+      'Share form with other users.',
+    ],
+    responsibilities: [
+      'Design the user interface and generate ideas for the website',
+      'Implement whole UI/UX of the website.',
+      'Collaborate with the Back-end team to integrate APIs accurately.',
+    ],
   },
   {
     title: 'MugiRecipe (Mobile App)',
@@ -171,6 +211,18 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 6,
     feTeam: 3,
+    mainFeature: [
+      'Detect ingredients from photos you upload or take directly with your camera.',
+      'Show recommendations for ingredients.',
+      'View food recipes and steps to cook them.',
+      'View popular dishes and shared recipes from other users.',
+    ],
+    responsibilities: [
+      'Lead a team of 4 members in the assignment.',
+      'Design the UI/UX for this mobile app.',
+      'Research the Clarifai API to detect food ingredients and integrate it into the app.',
+      'Collaborate with the team to implement UI/UX for the app.',
+    ],
   },
 
   // Timeline, Team, Team size, Responsibilities
