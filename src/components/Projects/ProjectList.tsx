@@ -12,9 +12,9 @@ import ProjectCard from './ProjectCard'
 
 const ProjectList = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null)
-  const [selectedProject, setSelectedProject] = useState<ProjectDetailProps | null>(null)
+  const [selectedProject, setSelectedProject] = useState<ProjectDetailProps | null>(PROJECTS_LIST_DETAIL[0])
   const { isMobile } = useWindowSize()
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   const handleViewProject = (index: number) => {
     setSelectedProject(PROJECTS_LIST_DETAIL[index])

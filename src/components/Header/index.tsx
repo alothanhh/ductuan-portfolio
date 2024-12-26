@@ -104,7 +104,6 @@ function Header() {
           ))}
         </Flex>
       </Drawer>
-      {/* <Text ta="center">Header is {pinned ? 'pinned' : 'not pinned'}</Text> */}
     </>
   )
 }

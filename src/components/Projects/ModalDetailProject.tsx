@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import { Divider, Flex, Text } from '@mantine/core'
+import { ActionIcon, Box, Divider, Flex, Text, ThemeIcon } from '@mantine/core'
+import { IconBrandGithub, IconCalendarDue, IconUsers } from '@tabler/icons-react'
 
 import { ProjectDetailProps } from '@/constants/project.constant'
 
@@ -32,11 +33,34 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
         }}
       />
       <Flex justify={'space-between'} mt={20}>
-        <Text>Github | Figma</Text>
-        <Text>Time: July 2023 - Oct 2024</Text>
+        <Box style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <ThemeIcon variant='light' size='lg' radius='xl' color='rgb(8, 205, 218)'>
+            <IconCalendarDue />
+          </ThemeIcon>
+          <Text fw={500}>{project.date}</Text>
+        </Box>
+
+        <Box>
+          <ActionIcon
+            variant='gradient'
+            size='lg'
+            radius='xl'
+            aria-label='Gradient action icon'
+            gradient={{ from: 'rgb(26, 247, 169)', to: 'rgb(8, 205, 218)', deg: 128 }}
+          >
+            <IconBrandGithub />
+          </ActionIcon>
+        </Box>
       </Flex>
 
-      <Text>Team size: 30 | FE Team: 3</Text>
+      <Box style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <ThemeIcon variant='light' size='lg' radius='xl' color='rgb(8, 205, 218)'>
+          <IconUsers />
+        </ThemeIcon>
+        <Text fw={500}>
+          Team size: {project.teamSize} - FE Team: {project.feTeam}
+        </Text>
+      </Box>
 
       <Divider my={20} />
 
