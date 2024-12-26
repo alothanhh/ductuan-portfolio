@@ -62,6 +62,25 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
         </Text>
       </Box>
 
+      <Box style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '20px' }}>
+        {project.techList.map((tech) => {
+          return (
+            <Text
+              key={tech}
+              style={{
+                padding: '2px 8px',
+                borderRadius: '999px',
+                border: '1px solid #e5e5e5',
+                fontSize: '14px',
+                fontWeight: '500',
+              }}
+            >
+              {tech}
+            </Text>
+          )
+        })}
+      </Box>
+
       <Divider my={20} />
 
       <Text>{project.description}</Text>

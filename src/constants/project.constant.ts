@@ -154,7 +154,7 @@ export const PROJECTS_LIST_DETAIL = [
     feTeam: 3,
     mainFeature: [
       'Login with zkLogin using social platforms such as Google, Twitch, and Facebook.',
-      'Create quizzes and answer quizzes in realtime',
+      'Create quizzes and answer quizzes in realtime.',
       'View quiz results on the SUI blockchain.',
     ],
     responsibilities: [
@@ -181,7 +181,7 @@ export const PROJECTS_LIST_DETAIL = [
       'Share form with other users.',
     ],
     responsibilities: [
-      'Design the user interface and generate ideas for the website',
+      'Design the user interface and generate ideas for the website.',
       'Implement whole UI/UX of the website.',
       'Collaborate with the Back-end team to integrate APIs accurately.',
     ],
