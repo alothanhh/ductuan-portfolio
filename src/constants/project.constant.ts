@@ -3,6 +3,7 @@ import imgBVBank from '@/assets/images/projects/imgBVBank.jpg'
 import imgForms from '@/assets/images/projects/imgForms.jpg'
 import imgMokApi from '@/assets/images/projects/imgMokApi.png'
 import imgMugiRecipe from '@/assets/images/projects/imgMugiRecipe.png'
+import imgOcb from '@/assets/images/projects/imgOCB.jpg'
 import imgPortfolio from '@/assets/images/projects/imgPortfolio.jpg'
 import imgQuizzes from '@/assets/images/projects/imgQuizzes.png'
 
@@ -24,6 +25,14 @@ export const PROJECTS_LIST = [
     link: 'https://picsum.photos/id/10/200/200',
   },
   {
+    title: 'Payment and school management solution for OCB',
+    description:
+      'The project is a collaboration between ATOM and OCB, designed to support payment solutions for education. It helps students and cashiers efficiently pay and manage tuition bills.',
+    image: imgOcb,
+    techList: ['React + Vite', 'Javascript', 'TailwindCSS', 'Redux', 'Redux Toolkit'],
+    link: 'https://picsum.photos/id/10/200/200',
+  },
+  {
     title: 'ATOM HUB',
     description:
       'A project for partner clients to explore, register, and test ATOM’s products and services, with a primary focus on API testing.',
@@ -31,14 +40,14 @@ export const PROJECTS_LIST = [
     techList: ['Next.js', 'Typescript', 'TailwindCSS'],
     link: 'https://picsum.photos/id/10/200/200',
   },
-  {
-    title: 'Quizzes on-chain',
-    description:
-      'A decentralized application on the SUI platform. Players can participate to create and answer quizzes in realtime. All results are stored on the blockchain.',
-    image: imgQuizzes,
-    techList: ['Next.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
-    link: 'https://picsum.photos/id/10/200/200',
-  },
+  // {
+  //   title: 'Quizzes on-chain',
+  //   description:
+  //     'A decentralized application on the SUI platform. Players can participate to create and answer quizzes in realtime. All results are stored on the blockchain.',
+  //   image: imgQuizzes,
+  //   techList: ['Next.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
+  //   link: 'https://picsum.photos/id/10/200/200',
+  // },
   // {
   //   title: 'Form Generator System',
   //   description:
@@ -58,12 +67,17 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       'Explore my creative journey, skills, and accomplishments! Here, you’ll find highlights of my work, passion projects, and the expertise I bring to every opportunity.',
     image: imgPortfolio,
+    hasGitRepo: true,
+    gitLink: 'https://github.com/alothanhh/aiden-portfolio.git',
     techList: ['Next.js', 'Typescript', 'Mantine', 'Framer Motion', 'EmailJs'],
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 1,
     feTeam: 1,
     mainFeature: ['Showcase of my skills, projects, and accomplishments.', 'Directly contact me via email.'],
-    responsibilities: ['Generate ideas and build whole website.'],
+    responsibilities: [
+      'Generate ideas and build whole website.',
+      'Initialized the project and set up ESLint and Prettier to enhance code efficiency and maintain consistency..',
+    ],
   },
   {
     title: 'Merchant Portal - BVBank',
@@ -73,6 +87,8 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       'A management platform for merchants, this is one of the payment infrastructures in the collaboration project between ATOM and Viet Capital Bank to support payment solutions.',
     image: imgBVBank,
+    hasGitRepo: false,
+    gitLink: '',
     techList: [
       'React + Vite',
       'Javascript',
@@ -86,7 +102,7 @@ export const PROJECTS_LIST_DETAIL = [
       'React Table',
     ],
     link: 'https://picsum.photos/id/10/200/200',
-    teamSize: 33,
+    teamSize: 30,
     feTeam: 3,
     mainFeature: [
       'Manage and display payment reports from various types of transactions such as card transactions, QR transactions, etc.',
@@ -100,6 +116,41 @@ export const PROJECTS_LIST_DETAIL = [
     ],
   },
   {
+    title: 'Payment and school management solution for OCB',
+    type: 'PROJECT OF ATOM',
+    date: 'Aug 2024 - Dec 2024',
+    color: 'red',
+    description:
+      'The project is a collaboration between ATOM and OCB, designed to support payment solutions for education. It helps students and cashiers efficiently pay and manage tuition bills.',
+    image: imgOcb,
+    hasGitRepo: false,
+    gitLink: '',
+    techList: [
+      'React + Vite',
+      'Javascript',
+      'TailwindCSS',
+      'Redux',
+      'Redux Toolkit',
+      'Socket.io',
+      'React Hook Form',
+      'Yup',
+      'Chartjs',
+      'React Table',
+    ],
+    link: 'https://picsum.photos/id/10/200/200',
+    teamSize: 15,
+    feTeam: 4,
+    mainFeature: [
+      'Manage and display payment reports from various types of transactions such as card transactions, QR transactions, etc.',
+      'Create courses, bills, and process payments directly on the platform.',
+    ],
+    responsibilities: [
+      'Update the UI and business logic based on design specifications and user requirements.',
+      'Support the team in implementing new features and collaborate with the Back-end team to integrate APIs from Odoo.',
+      'Fix bugs and refactor code to enhance application performance.',
+    ],
+  },
+  {
     title: 'ATOM HUB',
     type: 'PROJECT OF ATOM',
     date: 'Jun 2024 - Aug 2024',
@@ -107,6 +158,8 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       'A project for partner clients to explore, register, and test ATOM’s products and services, with a primary focus on API testing.',
     image: imgAtomHub,
+    hasGitRepo: false,
+    gitLink: '',
     techList: [
       'Next.js',
       'Typescript',
@@ -138,6 +191,8 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       'A decentralized application on the SUI platform. Players can participate to create and answer quizzes in realtime. All results are stored on the blockchain.',
     image: imgQuizzes,
+    hasGitRepo: false,
+    gitLink: '',
     techList: [
       'Next.js',
       'Typescript',
@@ -170,6 +225,8 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       'Form generator and management system similar to Google Form, Microsoft Form but more specialized in data types for administrative documents in Vietnam such as linked data types, tabular data types,...',
     image: imgForms,
+    hasGitRepo: true,
+    gitLink: 'https://github.com/BlueSky-17/FormGenerator-FE',
     techList: ['React', 'Typescript', 'Material UI'],
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 3,
@@ -194,10 +251,24 @@ export const PROJECTS_LIST_DETAIL = [
     description:
       "A mobile app that recommends recipes based on photos. It uses the Clarifai API to analyze user's photos and provide tailored recipe suggestions.",
     image: imgMugiRecipe,
+    hasGitRepo: true,
+    gitLink: 'https://github.com/alothanhh/mugirecipe-frontend.git',
     techList: ['React Native', 'Expo', 'Clarifai', 'MongoDB', 'NestJs'],
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 4,
     feTeam: 3,
+    mainFeature: [
+      'Detect ingredients from photos you upload or take directly with your camera.',
+      'Show recommendations for ingredients.',
+      'View food recipes and steps to cook them.',
+      'View popular dishes and shared recipes from other users.',
+    ],
+    responsibilities: [
+      'Lead a team of 4 members in the assignment.',
+      'Design the UI/UX for this mobile app.',
+      'Research the Clarifai API to detect food ingredients and integrate it into the app.',
+      'Collaborate with the team to implement UI/UX for the app.',
+    ],
   },
   {
     title: 'Mock APIS Generator',
@@ -211,17 +282,10 @@ export const PROJECTS_LIST_DETAIL = [
     link: 'https://picsum.photos/id/10/200/200',
     teamSize: 6,
     feTeam: 3,
-    mainFeature: [
-      'Detect ingredients from photos you upload or take directly with your camera.',
-      'Show recommendations for ingredients.',
-      'View food recipes and steps to cook them.',
-      'View popular dishes and shared recipes from other users.',
-    ],
+    mainFeature: ['Create mock APIs and mock data for testing and development purposes.'],
     responsibilities: [
-      'Lead a team of 4 members in the assignment.',
-      'Design the UI/UX for this mobile app.',
-      'Research the Clarifai API to detect food ingredients and integrate it into the app.',
-      'Collaborate with the team to implement UI/UX for the app.',
+      'Being a UI/UX designer for this project.',
+      'Implement UI Homepage and support the team to implement UI for other pages.',
     ],
   },
 

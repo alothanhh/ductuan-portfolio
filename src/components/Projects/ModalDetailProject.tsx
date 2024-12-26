@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { ActionIcon, Box, Divider, Flex, List, Text, ThemeIcon } from '@mantine/core'
 import { IconBrandGithub, IconCalendarDue, IconUsers } from '@tabler/icons-react'
@@ -41,15 +42,19 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
         </Box>
 
         <Box>
-          <ActionIcon
-            variant='gradient'
-            size='lg'
-            radius='xl'
-            aria-label='Gradient action icon'
-            gradient={{ from: 'rgb(26, 247, 169)', to: 'rgb(8, 205, 218)', deg: 128 }}
-          >
-            <IconBrandGithub />
-          </ActionIcon>
+          {project.hasGitRepo && (
+            <Link href={project.gitLink} target='_blank'>
+              <ActionIcon
+                variant='gradient'
+                size='lg'
+                radius='xl'
+                aria-label='Gradient action icon'
+                gradient={{ from: 'rgb(26, 247, 169)', to: 'rgb(8, 205, 218)', deg: 128 }}
+              >
+                <IconBrandGithub />
+              </ActionIcon>
+            </Link>
+          )}
         </Box>
       </Flex>
 
@@ -95,7 +100,7 @@ const ModalDetailProject = ({ onClose, isOpen, selectedProject: project }: Props
 
       <Divider my={20} />
 
-      <Text fw={600}>Responsibilities:</Text>
+      <Text fw={600}>Responsibility:</Text>
       <List listStyleType='disc'>
         {project.responsibilities?.map((feature, index) => <List.Item key={index}>{feature}</List.Item>)}
       </List>

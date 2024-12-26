@@ -43,8 +43,13 @@ const ProjectList = () => {
           </Grid.Col>
         ))}
         <Grid.Col
-          span={{ base: 12, md: 6 }}
-          style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '500' }}
+          span={{ base: 12 }}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontWeight: '500',
+          }}
         >
           And more than 5 assignments/projects at university.
         </Grid.Col>

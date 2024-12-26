@@ -154,7 +154,7 @@ const Education = () => {
                   Lead of design team: Design media publications and other products for events such as the CSE Job Fair,
                   the Green Summer Volunteer Campaign, etc
                   <Link
-                    href={''}
+                    href={'https://drive.google.com/drive/folders/1Ok8c-JPgNi8ruxMrmiGuvNRxnbIHD0Bu?usp=sharing'}
                     target='_blank'
                     style={{
                       border: 'none',

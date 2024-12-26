@@ -47,15 +47,19 @@ const ProjectCard = ({ project, opacity }: { opacity: string; project: ProjectDe
         }}
       >
         <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Text
-            style={{
-              fontSize: '24px',
-              fontWeight: '600',
-            }}
-          >
-            {project.title}
-          </Text>
-          <Badge color={project.color} variant='outline' size='sm'>
+          <Box style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Text
+              style={{
+                fontSize: '24px',
+                fontWeight: '600',
+                padding: 'unset',
+              }}
+            >
+              {project.title}
+            </Text>
+          </Box>
+
+          <Badge color={project.color} variant='outline' size='sm' style={{ minWidth: 'fit-content' }}>
             {project.type}
           </Badge>
         </Box>
