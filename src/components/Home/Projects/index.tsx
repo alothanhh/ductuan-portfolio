@@ -19,45 +19,48 @@ const Projects = () => {
 
   return (
     <ScrollFadeUp repeat>
-      <Box
-        id='projects'
-        ref={targetId === 'projects' ? targetRef : null}
-        style={{
-          display: 'flex',
-          flexDirection: isMobile ? 'column' : 'row',
-          alignItems: isMobile ? 'center' : '',
-          gap: '32px',
-          padding: isMobile ? '32px 16px' : '32px',
-          alignContent: 'center',
-          justifyContent: 'space-between',
-          backgroundColor: 'rgb(247, 247, 247)',
-        }}
-      >
+      <Box style={{ width: '100%', backgroundColor: 'rgb(247, 247, 247)', display: 'flex', justifyContent: 'center' }}>
         <Box
+          id='projects'
+          ref={targetId === 'projects' ? targetRef : null}
           style={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: isMobile ? 'column' : 'row',
             alignItems: isMobile ? 'center' : '',
-            gap: '8px',
-            width: 'max-content',
+            gap: '32px',
+            padding: isMobile ? '32px 16px' : '32px',
+            alignContent: 'center',
+            justifyContent: 'space-between',
+            maxWidth: '1600px',
+            width: '100%',
           }}
         >
-          <Title>PROJECTS</Title>
-          <Text size='md'>A curated selection of my web projects.</Text>
-          <Link href='/projects' style={{ textDecoration: 'none' }}>
-            <Button
-              rightSection={<IconArrowRight size={20} />}
-              className={classes['button-gradient']}
-              style={{
-                display: isMobile ? 'none' : 'flex',
-              }}
-            >
-              See all
-            </Button>
-          </Link>
-        </Box>
+          <Box
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: isMobile ? 'center' : '',
+              gap: '8px',
+              width: 'max-content',
+            }}
+          >
+            <Title>PROJECTS</Title>
+            <Text size='md'>A curated selection of my web projects.</Text>
+            <Link href='/projects' style={{ textDecoration: 'none' }}>
+              <Button
+                rightSection={<IconArrowRight size={20} />}
+                className={classes['button-gradient']}
+                style={{
+                  display: isMobile ? 'none' : 'flex',
+                }}
+              >
+                See all
+              </Button>
+            </Link>
+          </Box>
 
-        <ProjectList />
+          <ProjectList />
+        </Box>
       </Box>
     </ScrollFadeUp>
   )

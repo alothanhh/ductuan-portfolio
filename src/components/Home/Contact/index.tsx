@@ -17,26 +17,30 @@ function Contact() {
 
   return (
     <ScrollFadeUp repeat>
-      <Box
-        id='contact'
-        ref={targetId === 'contact' ? targetRef : null}
-        style={{
-          paddingTop: '32px',
-        }}
-      >
-        <Title text='CONTACT' />
+      <Box style={{ display: 'flex', justifyContent: 'center' }}>
         <Box
+          id='contact'
+          ref={targetId === 'contact' ? targetRef : null}
           style={{
-            display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            gap: '32px',
-            alignContent: 'center',
-            justifyContent: 'center',
-            padding: isMobile ? '32px 16px' : '32px',
+            paddingTop: '32px',
+            maxWidth: '1600px',
+            width: '100%',
           }}
         >
-          <ContactInfo />
-          <ContactForm />
+          <Title text='CONTACT' />
+          <Box
+            style={{
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              gap: '32px',
+              alignContent: 'center',
+              justifyContent: 'center',
+              padding: isMobile ? '32px 16px' : '32px',
+            }}
+          >
+            <ContactInfo />
+            <ContactForm />
+          </Box>
         </Box>
       </Box>
     </ScrollFadeUp>
