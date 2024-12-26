@@ -85,7 +85,7 @@ function About() {
                 backgroundClip: 'text',
               }}
             >
-              Aiden Dang
+              Thanh Dang
             </span>
           </Text>
 

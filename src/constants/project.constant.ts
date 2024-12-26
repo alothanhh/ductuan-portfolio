@@ -76,7 +76,7 @@ export const PROJECTS_LIST_DETAIL = [
     mainFeature: ['Showcase of my skills, projects, and accomplishments.', 'Directly contact me via email.'],
     responsibilities: [
       'Generate ideas and build whole website.',
-      'Initialized the project and set up ESLint and Prettier to enhance code efficiency and maintain consistency..',
+      'Initialized the project and set up ESLint and Prettier to enhance code efficiency and maintain consistency.',
     ],
   },
   {
