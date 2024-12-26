@@ -160,7 +160,7 @@ export const PROJECTS_LIST_DETAIL = [
     feTeam: 3,
   },
   {
-    title: 'MOK APIS',
+    title: 'Mock APIS Generator',
     type: 'PROJECT OF ATOM',
     date: 'Jun 2024',
     color: 'red',

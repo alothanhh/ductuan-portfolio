@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 
 import { useContext } from 'react'
@@ -68,18 +69,15 @@ const Education = () => {
                 <Link
                   href={'https://drive.google.com/file/d/1URIBtR54R9uuouRMAvWEQezYutFzfKBY/view?usp=sharing'}
                   target='_blank'
+                  style={{
+                    border: 'none',
+                    padding: 0,
+                    fontWeight: '500',
+                    textDecoration: 'underline',
+                    color: 'rgb(8, 205, 218)',
+                  }}
                 >
-                  <Text
-                    c='rgb(8, 205, 218)'
-                    style={{
-                      border: 'none',
-                      padding: 0,
-                      fontWeight: '500',
-                      textDecoration: 'underline',
-                    }}
-                  >
-                    Transcript
-                  </Text>
+                  Transcript
                 </Link>
               </Box>
             </List.Item>
@@ -152,21 +150,21 @@ const Education = () => {
             >
               <List.Item>
                 <Text size='md'>CSE Multimedia</Text>
-                <Text size='sm' c='gray'>
+                <Text size='sm' c='gray' style={{ display: 'flex', flexDirection: 'column' }}>
                   Lead of design team: Design media publications and other products for events such as the CSE Job Fair,
                   the Green Summer Volunteer Campaign, etc
-                  <Link href={''} target='_blank'>
-                    <Text
-                      c='rgb(8, 205, 218)'
-                      style={{
-                        border: 'none',
-                        padding: 0,
-                        fontWeight: '500',
-                        textDecoration: 'underline',
-                      }}
-                    >
-                      Explore my Gallery
-                    </Text>
+                  <Link
+                    href={''}
+                    target='_blank'
+                    style={{
+                      border: 'none',
+                      padding: 0,
+                      fontWeight: '500',
+                      textDecoration: 'underline',
+                      color: 'rgb(8, 205, 218)',
+                    }}
+                  >
+                    Explore my Gallery
                   </Link>
                 </Text>
               </List.Item>
