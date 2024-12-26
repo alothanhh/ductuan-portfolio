@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Grid } from '@mantine/core'
 
 import useWindowSize from '@/hooks/use-window-size'
@@ -12,14 +12,26 @@ import ProjectCard from './ProjectCard'
 
 const ProjectList = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null)
-  const [selectedProject, setSelectedProject] = useState<ProjectDetailProps | null>(PROJECTS_LIST_DETAIL[0])
+  const [selectedProject, setSelectedProject] = useState<ProjectDetailProps | null>(null)
   const { isMobile } = useWindowSize()
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleViewProject = (index: number) => {
     setSelectedProject(PROJECTS_LIST_DETAIL[index])
     setIsOpen(true)
   }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const id = params.get('project_id')
+
+      if (id)
+        setTimeout(() => {
+          handleViewProject(Number(id))
+        }, 500)
+    }
+  }, [])
 
   return (
     <>

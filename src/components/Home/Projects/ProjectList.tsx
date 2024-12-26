@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 import { useState } from 'react'
 import { Box, Button } from '@mantine/core'
@@ -12,6 +13,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectList = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null)
+  const navigate = useRouter()
 
   return (
     <Box
@@ -25,7 +27,12 @@ const ProjectList = () => {
       }}
     >
       {PROJECTS_LIST.map((project, index) => (
-        <div key={index} onMouseOver={() => setActiveCard(index)} onMouseLeave={() => setActiveCard(null)}>
+        <div
+          key={index}
+          onMouseOver={() => setActiveCard(index)}
+          onMouseLeave={() => setActiveCard(null)}
+          onClick={() => navigate.push(`/projects?project_id=${index}`)}
+        >
           <ProjectCard project={project} opacity={activeCard === index || activeCard === null ? '1' : '0.5'} />
         </div>
       ))}

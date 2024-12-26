@@ -8,6 +8,14 @@ import imgQuizzes from '@/assets/images/projects/imgQuizzes.png'
 
 export const PROJECTS_LIST = [
   {
+    title: 'Aiden Portfolio',
+    description:
+      'Explore my creative journey, skills, and accomplishments! Here, you’ll find highlights of my work, passion projects, and the expertise I bring to every opportunity.',
+    image: imgPortfolio,
+    techList: ['Next.js', 'Typescript', 'Mantine', 'Framer Motion', 'EmailJs'],
+    link: 'https://picsum.photos/id/10/200/200',
+  },
+  {
     title: 'Merchant Portal - BVBank',
     description:
       'A management platform for merchants, this is one of the payment infrastructures in the collaboration project between ATOM and Viet Capital Bank to support payment solutions.',
@@ -31,14 +39,14 @@ export const PROJECTS_LIST = [
     techList: ['Next.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
     link: 'https://picsum.photos/id/10/200/200',
   },
-  {
-    title: 'Form Generator System',
-    description:
-      'Form generator and management system similar to Google Form, Microsoft Form but more specialized in data types for administrative documents in Vietnam such as linked data types, tabular data types,...',
-    image: imgForms,
-    techList: ['React', 'Typescript', 'Material UI'],
-    link: 'https://picsum.photos/id/10/200/200',
-  },
+  // {
+  //   title: 'Form Generator System',
+  //   description:
+  //     'Form generator and management system similar to Google Form, Microsoft Form but more specialized in data types for administrative documents in Vietnam such as linked data types, tabular data types,...',
+  //   image: imgForms,
+  //   techList: ['React', 'Typescript', 'Material UI'],
+  //   link: 'https://picsum.photos/id/10/200/200',
+  // },
 ]
 
 export const PROJECTS_LIST_DETAIL = [
