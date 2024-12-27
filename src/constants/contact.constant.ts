@@ -5,7 +5,7 @@ import icSocial from '@/assets/icons/contact/icSocial.svg?component'
 export const CONTACT_CARD_INFO = [
   {
     title: 'Contact on Email',
-    description: 'thanh.dangquang@gmail.com',
+    description: 'thanh.dangquang28@gmail.com',
     logo: icEmail,
   },
   {
