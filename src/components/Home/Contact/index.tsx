@@ -8,8 +8,8 @@ import useWindowSize from '@/hooks/use-window-size'
 import Title from '../../common/Title'
 import ScrollFadeUp from '../../shared/scroll-fade-up'
 
-import ContactForm from './ContactForm'
-import ContactInfo from './ContactInfo'
+import ContactForm from './contact-form'
+import ContactInfo from './contact-info'
 
 function Contact() {
   const { isMobile } = useWindowSize()

@@ -10,9 +10,9 @@ import icPts from '@/assets/icons/skill/icPts.png'
 import icReact from '@/assets/icons/skill/icReact.png'
 import icTailwind from '@/assets/icons/skill/icTailwind.png'
 
-import ScrollFadeUp from '../shared/scroll-fade-up'
+import ScrollFadeUp from '../../shared/scroll-fade-up'
 
-import SkillCard from './SkillCard'
+import SkillCard from './skill-card'
 
 const SKILL_LIST = [icReact, icGitlab, icNext, icAngular, icTailwind, icPts, icAi, icMongoDb]
 

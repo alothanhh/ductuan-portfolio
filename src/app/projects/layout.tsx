@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Header from '@/components/header'
 
 const ProjectsLayout = ({ children }: { children: React.ReactNode }) => {
   return (

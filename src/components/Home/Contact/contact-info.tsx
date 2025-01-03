@@ -4,7 +4,7 @@ import useWindowSize from '@/hooks/use-window-size'
 
 import { CONTACT_CARD_INFO } from '../../../constants/contact.constant'
 
-import ContactCard from './ContactCard'
+import ContactCard from './contact-card'
 
 function ContactInfo() {
   const { isMobile } = useWindowSize()

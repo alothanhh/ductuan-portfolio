@@ -1,7 +1,7 @@
 'use client'
 import { Box, Grid, Text, Title } from '@mantine/core'
 
-import ProjectList from '@/components/Projects/ProjectList'
+import ProjectList from '@/components/projects/project-list'
 import ScrollFadeUp from '@/components/shared/scroll-fade-up'
 
 const Projects = () => {

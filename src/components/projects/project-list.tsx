@@ -1,19 +1,19 @@
 'use client'
-import Link from 'next/link'
 
 import { useState } from 'react'
-import { Box, Button } from '@mantine/core'
-import { IconArrowRight } from '@tabler/icons-react'
+import { Grid } from '@mantine/core'
 
-import ModalDetailProject from '@/components/Projects/ModalDetailProject'
-import { ProjectDetailProps, PROJECTS_LIST, PROJECTS_LIST_DETAIL } from '@/constants/project.constant'
-import classes from '@/styles/Button.module.css'
+import useWindowSize from '@/hooks/use-window-size'
 
-import ProjectCard from './ProjectCard'
+import { ProjectDetailProps, PROJECTS_LIST_DETAIL } from '../../constants/project.constant'
+
+import ModalDetailProject from './modal-detail-project'
+import ProjectCard from './project-card'
 
 const ProjectList = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const [selectedProject, setSelectedProject] = useState<ProjectDetailProps | null>(null)
+  const { isMobile } = useWindowSize()
   const [isOpen, setIsOpen] = useState(false)
 
   const handleViewProject = (index: number) => {
@@ -23,33 +23,37 @@ const ProjectList = () => {
 
   return (
     <>
-      <Box
+      <Grid
         style={{
-          display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           gap: '20px',
           width: '100%',
-          maxWidth: '900px',
+          padding: isMobile ? '32px' : '32px 64px',
         }}
       >
-        {PROJECTS_LIST.map((project, index) => (
-          <div
+        {PROJECTS_LIST_DETAIL.map((project, index) => (
+          <Grid.Col
             key={index}
+            span={{ base: 12, md: 6 }}
             onMouseOver={() => setActiveCard(index)}
             onMouseLeave={() => setActiveCard(null)}
             onClick={() => handleViewProject(index)}
           >
             <ProjectCard project={project} opacity={activeCard === index || activeCard === null ? '1' : '0.5'} />
-          </div>
+          </Grid.Col>
         ))}
-
-        <Link href='/projects' style={{ textDecoration: 'none' }}>
-          <Button rightSection={<IconArrowRight size={20} />} className={classes['button-gradient']}>
-            See all
-          </Button>
-        </Link>
-      </Box>
+        <Grid.Col
+          span={{ base: 12 }}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontWeight: '500',
+          }}
+        >
+          And more than 5 assignments/projects at university.
+        </Grid.Col>
+      </Grid>
       {selectedProject && (
         <ModalDetailProject isOpen={isOpen} onClose={() => setIsOpen(false)} selectedProject={selectedProject} />
       )}

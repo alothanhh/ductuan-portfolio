@@ -11,7 +11,7 @@ import { ScrollContext } from '@/contexts/scroll.context'
 import useWindowSize from '@/hooks/use-window-size'
 import classes from '@/styles/Button.module.css'
 
-import ProjectList from './ProjectList'
+import ProjectList from './project-list'
 
 const Projects = () => {
   const { isMobile } = useWindowSize()

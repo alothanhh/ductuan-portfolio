@@ -8,8 +8,8 @@ import useWindowSize from '@/hooks/use-window-size'
 import { ATOM, XELEX } from '../../../constants/experience.constant'
 import Title from '../../common/Title'
 
-import MultiRoleCard from './MultiRoleCard'
-import SingleRoleCard from './SingleRoleCard'
+import MultiRoleCard from './multi-role-card'
+import SingleRoleCard from './single-role-card'
 
 const Experience = () => {
   const { isMobile } = useWindowSize()

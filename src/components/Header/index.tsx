@@ -10,7 +10,7 @@ import { useDisclosure } from '@mantine/hooks'
 
 import { HEADER_BUTTONS } from '../../constants/header.constant'
 
-import HeaderSection from './Header-Section'
+import HeaderSection from './header-section'
 
 function Header() {
   const pinned = useHeadroom({ fixedAt: 120 })
