@@ -1,12 +1,12 @@
 'use client'
 
 import Header from '@/components/header'
-import About from '@/components/Home/about'
-import Contact from '@/components/Home/contact'
-import Education from '@/components/Home/education'
-import Experience from '@/components/Home/experience'
-import Projects from '@/components/Home/projects'
-import SkillMarquee from '@/components/Home/skill-marquee'
+import About from '@/components/home/about'
+import Contact from '@/components/home/contact'
+import Education from '@/components/home/education'
+import Experience from '@/components/home/experience'
+import Projects from '@/components/home/projects'
+import SkillMarquee from '@/components/home/skill-marquee'
 
 export default function Home() {
   return (

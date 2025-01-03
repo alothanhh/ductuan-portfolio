@@ -1,3 +1,4 @@
+'use client'
 import { RefObject, useContext } from 'react'
 import { Button } from '@mantine/core'
 import { useHover } from '@mantine/hooks'
