@@ -1,8 +1,9 @@
 .header {
-    font-weight: 'semibold';
-    font-size: '1em';
-    background-color: 'transparent';
-    &:hover {
-      background-color: '#18D26E';
-    }
+  font-weight: 'semibold';
+  font-size: '1em';
+  background-color: 'transparent';
+  &:hover {
+    background-color: '#18D26E';
+  }
 }
+/*  */
