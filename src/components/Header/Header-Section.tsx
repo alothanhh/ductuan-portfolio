@@ -2,7 +2,7 @@ import { RefObject, useContext } from 'react'
 import { Button } from '@mantine/core'
 import { useHover } from '@mantine/hooks'
 
-import { ScrollContext } from '@/contexts/ScrollContext'
+import { ScrollContext } from '@/contexts/scroll.context'
 
 type HeaderSectionProps = {
   button: { label: string; id: string }

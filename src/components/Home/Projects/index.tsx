@@ -7,7 +7,7 @@ import { Title } from '@mantine/core'
 import { IconArrowRight } from '@tabler/icons-react'
 
 import ScrollFadeUp from '@/components/shared/scroll-fade-up'
-import { ScrollContext } from '@/contexts/ScrollContext'
+import { ScrollContext } from '@/contexts/scroll.context'
 import useWindowSize from '@/hooks/use-window-size'
 import classes from '@/styles/Button.module.css'
 

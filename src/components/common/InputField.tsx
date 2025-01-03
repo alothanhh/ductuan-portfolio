@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes } from 'react'
 import { Control, Controller, FieldValues, Path, useFormState, useWatch } from 'react-hook-form'
 
 interface InputProps<T extends FieldValues> extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {

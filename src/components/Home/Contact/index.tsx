@@ -2,7 +2,7 @@
 import { useContext } from 'react'
 import { Box } from '@mantine/core'
 
-import { ScrollContext } from '@/contexts/ScrollContext'
+import { ScrollContext } from '@/contexts/scroll.context'
 import useWindowSize from '@/hooks/use-window-size'
 
 import Title from '../../common/Title'

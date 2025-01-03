@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 // import { Inter, Montserrat, Geist } from "next/font/google";
 import { GeistSans } from 'geist/font/sans'
 
-import MantineRegistry from '@/contexts/MantineRegistry'
 import AppProvider from '@/providers'
 
 import './globals.css'
@@ -21,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={GeistSans.className}>
-        <MantineRegistry>
-          <AppProvider>{children}</AppProvider>
-        </MantineRegistry>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   )

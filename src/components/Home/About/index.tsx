@@ -10,7 +10,7 @@ import icEmail from '@/assets/icons/icEmail.svg'
 import icPhone from '@/assets/icons/icPhone.svg'
 import icPlaceMarker from '@/assets/icons/icPlaceMarker.svg'
 import imgAvatarFocus from '@/assets/images/imgAvatar_2.jpg'
-import { ScrollContext } from '@/contexts/ScrollContext'
+import { ScrollContext } from '@/contexts/scroll.context'
 import useWindowSize from '@/hooks/use-window-size'
 import classes from '@/styles/Button.module.css'
 
