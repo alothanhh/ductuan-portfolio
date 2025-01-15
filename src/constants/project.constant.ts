@@ -17,9 +17,9 @@ export const PROJECTS_LIST = [
     link: 'https://picsum.photos/id/10/200/200',
   },
   {
-    title: 'Merchant Portal - BVBank',
+    title: 'Merchant Platform for BVBank',
     description:
-      'A management platform for merchants, this is one of the payment infrastructures in the collaboration project between ATOM and Viet Capital Bank to support payment solutions.',
+      'A comprehensive management platform designed for merchants, developed as a collaborative project between ATOM and Viet Capital Bank',
     image: imgBVBank,
     techList: ['React + Vite', 'Javascript', 'TailwindCSS'],
     link: 'https://picsum.photos/id/10/200/200',
