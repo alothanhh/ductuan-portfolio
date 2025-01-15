@@ -8,8 +8,8 @@ import AppProvider from '@/providers'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Aiden Dang | Portfolio',
-  description: "Aiden's Portfolio",
+  title: 'Tran Duc Tuan | Portfolio',
+  description: "Duc Tuan's Portfolio",
 }
 
 export default function RootLayout({

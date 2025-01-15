@@ -73,11 +73,11 @@ function ContactCard({ logo, title, description }: Props) {
             </Text>
           ) : (
             <Flex gap='4px'>
-              <Link href='https://www.linkedin.com/in/thanh-dangquang/' target='_blank' className='gradient-text'>
+              <Link href='#' target='_blank' className='gradient-text'>
                 Linkedin
               </Link>
               <Text> | </Text>
-              <Link href='https://t.me/aidendang' target='_blank' className='gradient-text'>
+              <Link href='#' target='_blank' className='gradient-text'>
                 Telegram
               </Link>
             </Flex>

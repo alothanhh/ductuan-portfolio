@@ -85,7 +85,7 @@ function About() {
                 backgroundClip: 'text',
               }}
             >
-              Thanh Dang
+              Tran Duc Tuan
             </span>
           </Text>
 
