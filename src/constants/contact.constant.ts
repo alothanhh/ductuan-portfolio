@@ -5,12 +5,12 @@ import icSocial from '@/assets/icons/contact/icSocial.svg?component'
 export const CONTACT_CARD_INFO = [
   {
     title: 'Contact on Email',
-    description: 'thanh.dangquang28@gmail.com',
+    description: '',
     logo: icEmail,
   },
   {
     title: 'Contact on Phone',
-    description: '0337 268 100',
+    description: '0349 463 683',
     logo: icPhone,
   },
   {

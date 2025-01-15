@@ -51,7 +51,7 @@ const Education = () => {
             }}
           >
             <Text size='xl' fw={600}>
-              Ho Chi Minh City University of Technology (HCMUT)
+              Ho Chi Minh University of Banking (HUB)
             </Text>
 
             <Text size='lg' fw={600}>
@@ -66,7 +66,7 @@ const Education = () => {
             <List.Item>
               <Box style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <Text size='md'>GPA: 8.05/10 (or 3.4/4)</Text>{' '}
-                <Link
+                {/* <Link
                   href={'https://drive.google.com/file/d/1URIBtR54R9uuouRMAvWEQezYutFzfKBY/view?usp=sharing'}
                   target='_blank'
                   style={{
@@ -78,7 +78,7 @@ const Education = () => {
                   }}
                 >
                   Transcript
-                </Link>
+                </Link> */}
               </Box>
             </List.Item>
           </List>

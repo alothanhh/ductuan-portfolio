@@ -21,18 +21,14 @@ function About() {
   const { targetRef, targetId } = useContext(ScrollContext)
 
   const handleDownload = () => {
-    const pdfUrl = '/cv/CV_Thanh_Dang.pdf'
-
-    const fileName = 'CV_Thanh_Dang.pdf'
-
-    const link = document.createElement('a')
-    link.href = pdfUrl
-    link.download = fileName
-
-    document.body.appendChild(link)
-    link.click()
-
-    document.body.removeChild(link)
+    // const pdfUrl = '/cv/CV_Thanh_Dang.pdf'
+    // const fileName = 'CV_Thanh_Dang.pdf'
+    // const link = document.createElement('a')
+    // link.href = pdfUrl
+    // link.download = fileName
+    // document.body.appendChild(link)
+    // link.click()
+    // document.body.removeChild(link)
   }
 
   return (
@@ -170,7 +166,7 @@ function About() {
                       lineHeight: '32px',
                     }}
                   >
-                    0337 268 100
+                    0349 463 683
                   </Text>
                 </Box>
                 <Box
@@ -186,15 +182,13 @@ function About() {
                       fontSize: '16px',
                       lineHeight: '32px',
                     }}
-                  >
-                    thanh.dangquang28@gmail.com
-                  </Text>
+                  ></Text>
                 </Box>
               </Box>
             </Box>
 
             <Flex gap={4}>
-              <Link href='/cv-preview' target='_blank'>
+              <Link href='#' target='_blank'>
                 <Button
                   variant='outline'
                   c='rgb(8, 205, 218)'
