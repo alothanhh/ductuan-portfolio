@@ -80,7 +80,7 @@ export const PROJECTS_LIST_DETAIL = [
     ],
   },
   {
-    title: 'Merchant Portal - BVBank',
+    title: 'Merchant Platform for BVBank',
     type: 'PROJECT OF ATOM',
     date: 'Aug 2024 - Dec 2024',
     color: 'red',
